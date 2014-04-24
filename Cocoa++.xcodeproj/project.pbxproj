@@ -8,34 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		453904D41903DAD700E2B04F /* libEonilCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 458443FB1903327100B468A7 /* libEonilCocoa.a */; };
-		453905131903E1E200E2B04F /* Control.h in Headers */ = {isa = PBXBuildFile; fileRef = 453904FF1903E1E200E2B04F /* Control.h */; };
-		453905141903E1E200E2B04F /* Control.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905001903E1E200E2B04F /* Control.mm */; };
-		453905151903E1E200E2B04F /* TableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905011903E1E200E2B04F /* TableView.h */; };
-		453905161903E1E200E2B04F /* TableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905021903E1E200E2B04F /* TableView.mm */; };
-		453905171903E1E200E2B04F /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905031903E1E200E2B04F /* View.h */; };
-		453905181903E1E200E2B04F /* View.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905041903E1E200E2B04F /* View.mm */; };
-		453905191903E1E200E2B04F /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905051903E1E200E2B04F /* Window.h */; };
-		4539051A1903E1E200E2B04F /* Window.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905061903E1E200E2B04F /* Window.mm */; };
-		4539051B1903E1E200E2B04F /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905071903E1E200E2B04F /* Common.h */; };
-		4539051C1903E1E200E2B04F /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905081903E1E200E2B04F /* Common.mm */; };
-		4539051D1903E1E200E2B04F /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 4539050C1903E1E200E2B04F /* Object.h */; };
-		4539051E1903E1E200E2B04F /* Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4539050D1903E1E200E2B04F /* Object.mm */; };
-		4539051F1903E1E200E2B04F /* Any.h in Headers */ = {isa = PBXBuildFile; fileRef = 4539050F1903E1E200E2B04F /* Any.h */; };
-		453905201903E1E200E2B04F /* Any.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905101903E1E200E2B04F /* Any.mm */; };
-		453905211903E1E200E2B04F /* None.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905111903E1E200E2B04F /* None.h */; };
-		453905221903E1E200E2B04F /* None.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905121903E1E200E2B04F /* None.mm */; };
-		453905251903E24D00E2B04F /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 453905231903E24D00E2B04F /* Rect.cpp */; };
-		453905261903E24D00E2B04F /* Rect.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905241903E24D00E2B04F /* Rect.h */; };
-		453905291903E9F400E2B04F /* Responder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905271903E9F400E2B04F /* Responder.mm */; };
-		4539052A1903E9F400E2B04F /* Responder.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905281903E9F400E2B04F /* Responder.h */; };
-		4539052F1903ED9800E2B04F /* Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4539052D1903ED9800E2B04F /* Layer.mm */; };
-		453905301903ED9800E2B04F /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4539052E1903ED9800E2B04F /* Layer.h */; };
-		453905331903EE1F00E2B04F /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 453905311903EE1F00E2B04F /* Color.cpp */; };
-		453905341903EE1F00E2B04F /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905321903EE1F00E2B04F /* Color.h */; };
-		453905371903F14100E2B04F /* Type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 453905351903F14100E2B04F /* Type.cpp */; };
-		453905381903F14100E2B04F /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = 453905361903F14100E2B04F /* Type.h */; };
-		4539053B1904028500E2B04F /* Color.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905391904028500E2B04F /* Color.mm */; };
-		4539053C1904028500E2B04F /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 4539053A1904028500E2B04F /* Color.h */; };
 		458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
 		4584443B1903D5E800B468A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458444391903D5E800B468A7 /* InfoPlist.strings */; };
 		4584443D1903D5E800B468A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.m */; };
@@ -48,6 +20,26 @@
 		458444591903D5E900B468A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458444571903D5E900B468A7 /* InfoPlist.strings */; };
 		4584445B1903D5E900B468A7 /* TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4584445A1903D5E900B468A7 /* TestAppTests.m */; };
 		458444621903D60100B468A7 /* libEonilCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 458443FB1903327100B468A7 /* libEonilCocoa.a */; };
+		459DC83D19089F5C00FF6BD2 /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905081903E1E200E2B04F /* Common.mm */; };
+		45B76BCF19093496002DF53B /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDF41908962E008B6530 /* String.cpp */; };
+		45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDDD190890E7008B6530 /* Cocoa.cpp */; };
+		45B76BD2190934C4002DF53B /* Type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 453905351903F14100E2B04F /* Type.cpp */; };
+		45B76BD3190934C4002DF53B /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDD919088F56008B6530 /* Data.cpp */; };
+		45B76BD4190934C4002DF53B /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 453905231903E24D00E2B04F /* Rect.cpp */; };
+		45B76BD5190934C4002DF53B /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 453905311903EE1F00E2B04F /* Color.cpp */; };
+		45B76BD6190934C4002DF53B /* ColorSpace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDF01908944E008B6530 /* ColorSpace.cpp */; };
+		45B76BD7190934C4002DF53B /* DataProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDD519088E78008B6530 /* DataProvider.cpp */; };
+		45B76BD8190934C4002DF53B /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDC919088AC9008B6530 /* Image.cpp */; };
+		45B76BD9190934F2002DF53B /* Any.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905101903E1E200E2B04F /* Any.mm */; };
+		45B76BDA190934F2002DF53B /* None.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905121903E1E200E2B04F /* None.mm */; };
+		45B76BDB190934F2002DF53B /* Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4539052D1903ED9800E2B04F /* Layer.mm */; };
+		45B76BDC190934F2002DF53B /* Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4539050D1903E1E200E2B04F /* Object.mm */; };
+		45B76BDD190934F2002DF53B /* Color.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905391904028500E2B04F /* Color.mm */; };
+		45B76BDE190934F2002DF53B /* View.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905041903E1E200E2B04F /* View.mm */; };
+		45B76BDF190934F2002DF53B /* Control.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905001903E1E200E2B04F /* Control.mm */; };
+		45B76BE0190934F2002DF53B /* TableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905021903E1E200E2B04F /* TableView.mm */; };
+		45B76BE1190934F2002DF53B /* Responder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905271903E9F400E2B04F /* Responder.mm */; };
+		45B76BE2190934F2002DF53B /* Window.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905061903E1E200E2B04F /* Window.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +89,18 @@
 		453905361903F14100E2B04F /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		453905391904028500E2B04F /* Color.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Color.mm; sourceTree = "<group>"; };
 		4539053A1904028500E2B04F /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		454FDDC919088AC9008B6530 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		454FDDCA19088AC9008B6530 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		454FDDD519088E78008B6530 /* DataProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataProvider.cpp; sourceTree = "<group>"; };
+		454FDDD619088E78008B6530 /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
+		454FDDD919088F56008B6530 /* Data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
+		454FDDDA19088F56008B6530 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		454FDDDD190890E7008B6530 /* Cocoa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cocoa.cpp; sourceTree = "<group>"; };
+		454FDDDE190890E7008B6530 /* Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cocoa.h; sourceTree = "<group>"; };
+		454FDDF01908944E008B6530 /* ColorSpace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColorSpace.cpp; sourceTree = "<group>"; };
+		454FDDF11908944E008B6530 /* ColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpace.h; sourceTree = "<group>"; };
+		454FDDF41908962E008B6530 /* String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
+		454FDDF51908962E008B6530 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
 		458443FB1903327100B468A7 /* libEonilCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilCocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4584441919033CDC00B468A7 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4584442E1903D5E800B468A7 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 		453904FD1903E1E200E2B04F /* Apple */ = {
 			isa = PBXGroup;
 			children = (
+				454FDDDD190890E7008B6530 /* Cocoa.cpp */,
+				454FDDDE190890E7008B6530 /* Cocoa.h */,
 				453905071903E1E200E2B04F /* Common.h */,
 				453905081903E1E200E2B04F /* Common.mm */,
 				453905091903E1E200E2B04F /* CoreFoundation */,
@@ -197,6 +203,10 @@
 			children = (
 				453905351903F14100E2B04F /* Type.cpp */,
 				453905361903F14100E2B04F /* Type.h */,
+				454FDDD919088F56008B6530 /* Data.cpp */,
+				454FDDDA19088F56008B6530 /* Data.h */,
+				454FDDF41908962E008B6530 /* String.cpp */,
+				454FDDF51908962E008B6530 /* String.h */,
 			);
 			path = CoreFoundation;
 			sourceTree = "<group>";
@@ -208,6 +218,12 @@
 				453905241903E24D00E2B04F /* Rect.h */,
 				453905311903EE1F00E2B04F /* Color.cpp */,
 				453905321903EE1F00E2B04F /* Color.h */,
+				454FDDF01908944E008B6530 /* ColorSpace.cpp */,
+				454FDDF11908944E008B6530 /* ColorSpace.h */,
+				454FDDD519088E78008B6530 /* DataProvider.cpp */,
+				454FDDD619088E78008B6530 /* DataProvider.h */,
+				454FDDC919088AC9008B6530 /* Image.cpp */,
+				454FDDCA19088AC9008B6530 /* Image.h */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -344,30 +360,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		458443F91903327100B468A7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4539053C1904028500E2B04F /* Color.h in Headers */,
-				453905381903F14100E2B04F /* Type.h in Headers */,
-				453905341903EE1F00E2B04F /* Color.h in Headers */,
-				4539051B1903E1E200E2B04F /* Common.h in Headers */,
-				4539051D1903E1E200E2B04F /* Object.h in Headers */,
-				453905171903E1E200E2B04F /* View.h in Headers */,
-				4539051F1903E1E200E2B04F /* Any.h in Headers */,
-				453905151903E1E200E2B04F /* TableView.h in Headers */,
-				453905131903E1E200E2B04F /* Control.h in Headers */,
-				453905191903E1E200E2B04F /* Window.h in Headers */,
-				4539052A1903E9F400E2B04F /* Responder.h in Headers */,
-				453905211903E1E200E2B04F /* None.h in Headers */,
-				453905261903E24D00E2B04F /* Rect.h in Headers */,
-				453905301903ED9800E2B04F /* Layer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		458443FA1903327100B468A7 /* Cocoa++ */ = {
 			isa = PBXNativeTarget;
@@ -375,7 +367,6 @@
 			buildPhases = (
 				458443F71903327100B468A7 /* Sources */,
 				458443F81903327100B468A7 /* Frameworks */,
-				458443F91903327100B468A7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -483,20 +474,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453905251903E24D00E2B04F /* Rect.cpp in Sources */,
-				453905331903EE1F00E2B04F /* Color.cpp in Sources */,
-				453905371903F14100E2B04F /* Type.cpp in Sources */,
-				4539051E1903E1E200E2B04F /* Object.mm in Sources */,
-				453905141903E1E200E2B04F /* Control.mm in Sources */,
-				4539051A1903E1E200E2B04F /* Window.mm in Sources */,
-				4539052F1903ED9800E2B04F /* Layer.mm in Sources */,
-				4539053B1904028500E2B04F /* Color.mm in Sources */,
-				453905181903E1E200E2B04F /* View.mm in Sources */,
-				453905161903E1E200E2B04F /* TableView.mm in Sources */,
-				453905291903E9F400E2B04F /* Responder.mm in Sources */,
-				453905221903E1E200E2B04F /* None.mm in Sources */,
-				453905201903E1E200E2B04F /* Any.mm in Sources */,
-				4539051C1903E1E200E2B04F /* Common.mm in Sources */,
+				45B76BD9190934F2002DF53B /* Any.mm in Sources */,
+				45B76BDA190934F2002DF53B /* None.mm in Sources */,
+				45B76BDB190934F2002DF53B /* Layer.mm in Sources */,
+				45B76BDC190934F2002DF53B /* Object.mm in Sources */,
+				45B76BDD190934F2002DF53B /* Color.mm in Sources */,
+				45B76BDE190934F2002DF53B /* View.mm in Sources */,
+				45B76BDF190934F2002DF53B /* Control.mm in Sources */,
+				45B76BE0190934F2002DF53B /* TableView.mm in Sources */,
+				45B76BE1190934F2002DF53B /* Responder.mm in Sources */,
+				45B76BE2190934F2002DF53B /* Window.mm in Sources */,
+				45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */,
+				45B76BD2190934C4002DF53B /* Type.cpp in Sources */,
+				45B76BD3190934C4002DF53B /* Data.cpp in Sources */,
+				45B76BD4190934C4002DF53B /* Rect.cpp in Sources */,
+				45B76BD5190934C4002DF53B /* Color.cpp in Sources */,
+				45B76BD6190934C4002DF53B /* ColorSpace.cpp in Sources */,
+				45B76BD7190934C4002DF53B /* DataProvider.cpp in Sources */,
+				45B76BD8190934C4002DF53B /* Image.cpp in Sources */,
+				45B76BCF19093496002DF53B /* String.cpp in Sources */,
+				459DC83D19089F5C00FF6BD2 /* Common.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -585,7 +582,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -610,7 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -625,7 +622,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

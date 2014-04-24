@@ -8,8 +8,8 @@
 
 #pragma once
 
-#define EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN			namespace Eonil { namespace CocoaCPP {
-#define EONIL_PLATFORM_APPLE_NAMESPACE_END			} }
+#define EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN						namespace Eonil { namespace CocoaCPP {
+#define EONIL_PLATFORM_APPLE_NAMESPACE_END							} }
 
 #define EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN		namespace Eonil { namespace CocoaCPP { namespace CoreFoundation {
 #define EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_END			} } }
@@ -23,9 +23,11 @@
 #define EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN					namespace Eonil { namespace CocoaCPP { namespace AppKit {
 #define EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END					} } }
 
+#ifdef __cplusplus
 #include <memory>
 #include <functional>
 #include <set>
+#endif
 
 #import	<CoreFoundation/CoreFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -37,6 +39,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifdef __cplusplus
 
 EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 
@@ -84,7 +101,11 @@ EONIL_PLATFORM_APPLE_NAMESPACE_END
 
 
 EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN
+using	Index	=	CFIndex;
 class	Type;
+class	Data;
+class	MutableData;
+class	String;
 EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_END
 
 EONIL_PLATFORM_APPLE_CORE_GRAPHICS_NAMESPACE_BEGIN
@@ -93,6 +114,9 @@ class	Point;
 class	Size;
 class	Rect;
 class	Color;
+class	ColorSpace;
+class	DataProvider;
+class	Image;
 EONIL_PLATFORM_APPLE_CORE_GRAPHICS_NAMESPACE_END
 
 EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_BEGIN
@@ -106,3 +130,5 @@ class	WindowController;
 using	Float		=	CoreGraphics::Float;
 using	Rect		=	CoreGraphics::Rect;
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END
+
+#endif

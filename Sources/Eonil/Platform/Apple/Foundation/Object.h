@@ -7,9 +7,9 @@
 //
 
 #pragma once
-#include "Common.h"
-#include "Any.h"
-#include "None.h"
+#include "../Common.h"
+#include "../ObjectiveC/Any.h"
+#include "../ObjectiveC/None.h"
 
 EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 

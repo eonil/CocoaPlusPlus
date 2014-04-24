@@ -7,8 +7,8 @@
 //
 
 #pragma once
-#include "Common.h"
-#include "Object.h"
+#include "../Common.h"
+#include "../Foundation/Object.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
@@ -21,7 +21,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
  Take care that you have to order to show the window.
  */
 class
-Responder : public Object
+Responder : protected Object
 {
 public:
 	using	Object::Object;

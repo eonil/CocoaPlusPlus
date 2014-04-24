@@ -58,9 +58,7 @@ DESIGN PRINCIPALS
 
 
 
--	Classes wrapping `CFType` objects are also kist a pointer wrapper.
-	`CFType` objects are just a typedef to a pointer.
-
+-	Classes wrapping `CFType` objects are also just a pointer wrapper.
 	Conceptually, a `CFType` wrappers are something like this;
 
 		typedef		CGColorRef		Color;
@@ -80,6 +78,14 @@ DESIGN PRINCIPALS
 
 
 
+-	Type Check.
+	`CFType` based classes are checked by imported CoreFoundation C symbols.
+	Objective-C classes are not checked when creating yet, but will be checked
+	when calling any method. This is mainly to avoid importing Objective-C symbols.
+	Type-check can be added later using forward declaration trick.
+
+
+
 
 
 
@@ -91,11 +97,14 @@ DESIGN PRINCIPALS
 Keep it simple by decomposing each features
 -------------------------------------------
 
--	Base classes are not exposed directly.
+
+
+-	Base classes are not exposed directly by default.
 	
-	To keep classes simple, all base class functionalities will not be exposed directly.
+	To keep simplicity, all base class functionalities will not be exposed directly.
 	Instead, every classes will have `as~` series method to provide access to base class features.
 	Where appropriate, some base class features may be exposed directly. This is fully case-by-case, but hiding is the default choice.
+
 
 
 -	No direct overriding.

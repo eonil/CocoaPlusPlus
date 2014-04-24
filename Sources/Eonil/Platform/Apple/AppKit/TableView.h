@@ -7,7 +7,7 @@
 //
 
 #pragma once
-#include "Common.h"
+#include "../Common.h"
 #include "Control.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN

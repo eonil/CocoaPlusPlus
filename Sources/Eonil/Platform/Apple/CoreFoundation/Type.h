@@ -7,40 +7,9 @@
 //
 
 #pragma once
-#include "Common.h"
+#include "../Common.h"
 
 EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN
-
-
-//
-///*!
-// Provides `CFType` features.
-// */
-//class
-//Type
-//{
-//public:
-//	Type() = delete;
-//	Type(std::nullptr_t);
-//	Type(Type&&);
-//	Type(CFTypeRef);
-//	virtual ~Type();
-//	
-//	Type(Type const&) = delete;			//!	Generic copy is not allowed.
-//	
-//public:
-//	auto	operator==(std::nullptr_t) const -> bool;
-//	auto	operator!=(std::nullptr_t) const -> bool;
-//	
-//	auto	operator=(Type&&) -> Type&;
-//	
-//public:
-//	operator	CFTypeRef();
-//	
-//private:
-//	CFTypeRef	_cftype		{NULL};
-//};
-
 
 
 
@@ -57,21 +26,22 @@ Type
 {
 public:
 	Type() = delete;
-	Type(std::nullptr_t);
 	Type(Type const&);
-	Type(CFTypeRef);
+	Type(Type&&);
 	virtual ~Type();
 	
-	Type(Type&&) = delete;			//!	Generic move is not allowed.
+	Type(std::nullptr_t);
+	Type(CFTypeRef);
 	
 public:
+	auto	operator=(Type const&) -> Type&;
+	auto	operator=(Type&&) -> Type&;
+	
 	auto	operator==(std::nullptr_t) const -> bool;
 	auto	operator!=(std::nullptr_t) const -> bool;
 	
-//	auto	operator=(Type &) -> Type&;
-	
 public:
-	operator	CFTypeRef();
+	operator	CFTypeRef() const;
 	
 private:
 	CFTypeRef	_cftype		{NULL};
@@ -88,6 +58,50 @@ private:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+///*!
+// Provides `CFType` features.
+// */
+//class
+//Type
+//{
+//public:
+//	Type() = delete;
+//	Type(std::nullptr_t);
+//	Type(Type&&);
+//	Type(CFTypeRef);
+//	virtual ~Type();
+//
+//	Type(Type const&) = delete;			//!	Generic copy is not allowed.
+//
+//public:
+//	auto	operator==(std::nullptr_t) const -> bool;
+//	auto	operator!=(std::nullptr_t) const -> bool;
+//
+//	auto	operator=(Type&&) -> Type&;
+//
+//public:
+//	operator	CFTypeRef();
+//
+//private:
+//	CFTypeRef	_cftype		{NULL};
+//};
 
 
 
