@@ -80,7 +80,7 @@
 		453905241903E24D00E2B04F /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		453905271903E9F400E2B04F /* Responder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Responder.mm; sourceTree = "<group>"; };
 		453905281903E9F400E2B04F /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
-		4539052B1903EBCC00E2B04F /* DESIGN PRINCIPALS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DESIGN PRINCIPALS"; sourceTree = "<group>"; };
+		4539052B1903EBCC00E2B04F /* DESIGN PRINCIPALS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "DESIGN PRINCIPALS.md"; sourceTree = "<group>"; };
 		4539052D1903ED9800E2B04F /* Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Layer.mm; sourceTree = "<group>"; };
 		4539052E1903ED9800E2B04F /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
 		453905311903EE1F00E2B04F /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		454FDDF41908962E008B6530 /* String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
 		454FDDF51908962E008B6530 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
 		458443FB1903327100B468A7 /* libEonilCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilCocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4584441919033CDC00B468A7 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4584441919033CDC00B468A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4584442E1903D5E800B468A7 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458444301903D5E800B468A7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		458444331903D5E800B468A7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +122,7 @@
 		458444561903D5E900B468A7 /* TestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestAppTests-Info.plist"; sourceTree = "<group>"; };
 		458444581903D5E900B468A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4584445A1903D5E900B468A7 /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
+		45B76BE719096D30002DF53B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,8 +261,9 @@
 		458443F21903327100B468A7 = {
 			isa = PBXGroup;
 			children = (
-				4584441919033CDC00B468A7 /* README */,
-				4539052B1903EBCC00E2B04F /* DESIGN PRINCIPALS */,
+				4584441919033CDC00B468A7 /* README.md */,
+				45B76BE719096D30002DF53B /* LICENSE.md */,
+				4539052B1903EBCC00E2B04F /* DESIGN PRINCIPALS.md */,
 				458444021903328900B468A7 /* Sources */,
 				458444361903D5E800B468A7 /* TestApp */,
 				458444541903D5E900B468A7 /* TestAppTests */,

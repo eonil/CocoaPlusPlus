@@ -28,3 +28,6 @@ and it's far easier to make a program in C++.
 
 
 
+License
+-------
+This library is licensed under MIT License.
