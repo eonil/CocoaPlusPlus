@@ -20,7 +20,7 @@ EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_BEGIN
  Wraps `CALayer`.
  */
 class
-Layer : public Object
+Layer : public Foundation::Object
 {
 public:
 	static auto	layer() -> Layer;

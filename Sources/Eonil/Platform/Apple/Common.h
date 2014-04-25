@@ -20,6 +20,9 @@
 #define EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_BEGIN			namespace Eonil { namespace CocoaCPP { namespace CoreAnimation {
 #define EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_END			} } }
 
+#define EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN				namespace Eonil { namespace CocoaCPP { namespace Foundation {
+#define EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_END				} } }
+
 #define EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN					namespace Eonil { namespace CocoaCPP { namespace AppKit {
 #define EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END					} } }
 
@@ -27,10 +30,12 @@
 #include <memory>
 #include <functional>
 #include <set>
+#include <vector>
 #endif
 
 #import	<CoreFoundation/CoreFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#include <objc/NSObjCRuntime.h>
 
 #ifdef __OBJC__
 #import	<Cocoa/Cocoa.h>
@@ -60,6 +65,7 @@ EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 template <typename T>	using	uptr	=	std::unique_ptr<T>;
 template <typename T>	using	sptr	=	std::shared_ptr<T>;
 template <typename T>	using	set		=	std::set<T>;
+template <typename T>	using	vec		=	std::vector<T>;
 
 using	PROC	=	std::function<auto() -> void>;
 
@@ -81,6 +87,9 @@ EONIL_COCOA_DEBUG_ASSERT(bool cond)
 #define	EONIL_COCOA_ASSERT_OBJC_TYPE_OR_NIL(object,type)		{EONIL_COCOA_DEBUG_ASSERT(object == nil or [object isKindOfClass:[type class]] == YES);}
 using	Integer		=	NSInteger;
 using	UInteger	=	NSUInteger;
+
+UInteger const	UIntegerMax	=	NSUIntegerMax;
+
 static inline auto
 toOBJC(bool o) -> BOOL
 {
@@ -123,12 +132,26 @@ EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_BEGIN
 class	Layer;
 EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_END
 
+EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
+class	Object;
+class	String;
+class	Data;
+class	AnytypeArray;
+template <typename T>	class	SpecificTypeArray;
+EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_END
+
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
+class	Color;
+class	Image;
 class	View;
+class	Control;
+class	ImageView;
 class	Window;
 class	WindowController;
 using	Float		=	CoreGraphics::Float;
+using	Size		=	CoreGraphics::Size;
 using	Rect		=	CoreGraphics::Rect;
+class	Pasteboard;
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END
 
 #endif

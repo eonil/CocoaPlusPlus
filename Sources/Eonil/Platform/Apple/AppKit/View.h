@@ -9,6 +9,7 @@
 #pragma once
 #include "../Common.h"
 #include "../Foundation/Object.h"
+#include "DraggingDestination.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
@@ -18,7 +19,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
 class
-View : public Object
+View : public Foundation::Object
 {
 public:
 	static auto	view() -> View;
@@ -38,6 +39,13 @@ public:
 	
 	auto	layer() const -> CoreAnimation::Layer;
 	auto	setLayer(CoreAnimation::Layer) -> void;
+	
+	/*!
+	 See `Pasteboard::Type` for generic UTIs.
+	 */
+	auto	registerForDraggedTypes(vec<Foundation::String> const& UTIs) -> void;
+	auto	unregisterDraggedTypes() -> void;
+	
 };
 
 
@@ -51,15 +59,14 @@ OverridableView : public View
 {
 public:
 	struct
-	Behaviors
+	Behaviors : DraggingDestination
 	{
 		virtual auto	didMoveToSuperview() -> void	{}
 	};
 	
-protected:
-	OverridableView(uptr<Behaviors>&& overriding);
+public:
+	OverridableView(uptr<Behaviors>&& overridings);
 };
-
 
 
 

@@ -9,6 +9,7 @@
 #pragma once
 #include "../Common.h"
 #include "Responder.h"
+#include "DraggingDestination.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
@@ -35,10 +36,13 @@ public:
 	};
 	
 	struct
-	Delegate
+	Delegate : Any, virtual DraggingDestination
 	{
-//		std::function<auto() -> bool>	shouldClose	{nullptr};
-		virtual auto	shouldClose() -> bool		{ return NO; }
+		Delegate();
+		Delegate(Delegate const&) = delete;
+		Delegate(Delegate&&) = delete;
+		
+		virtual auto	windowShouldClose(Window) -> bool		{ return NO; }
 	};
 
 public:
@@ -63,19 +67,24 @@ public:
 	
 	auto	frame() const -> Rect;
 	auto	setFrame(Rect, bool animated) -> void;
+	auto	setContentSize(Size) -> void;			//!	Resize by content size.
+	
+	auto	title() const -> Foundation::String;
+	auto	setTitle(Foundation::String) -> void;
+	auto	setTitleWithRepresentativeFilename(Foundation::String filename) -> void;
 	
 	auto	contentView() const -> View;
 	auto	setContentView(View) -> void;
 	
+	/*!
+	 See `Pasteboard::Type` for generic UTIs.
+	 */
+	auto	registerForDraggedTypes(vec<Foundation::String> const& UTIs) -> void;
+	auto	unregisterDraggedTypes() -> void;
+	
 public:
 	auto	asResponder() const -> Responder const&;
 	auto	asResponder()  -> Responder&;
-	
-private:
-	struct			Extras;
-	sptr<Extras>	_extras{};
-	
-	Window(id, sptr<Extras>);
 };
 
 template <typename T>

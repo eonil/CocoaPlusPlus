@@ -16,7 +16,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
 class
-TableColumn : public Object
+TableColumn : public Foundation::Object
 {
 public:
 	static auto	tableColume() -> TableColumn;
@@ -35,7 +35,6 @@ public:
 
 
 
-
 class
 TableView : public Control
 {
@@ -46,11 +45,10 @@ public:
 	static auto	tableView() -> TableView;
 	
 public:
-	class
-	Delegate
+	struct
+	Delegate : Any
 	{
-	public:
-		virtual auto	heightOfRow(TableView&, Integer row) -> Float		{ return 0; }
+		virtual auto	heightOfRow(TableView, Integer row) -> Float		{ return 0; }
 	};
 	
 	auto	delegate() const -> Delegate*;
@@ -65,15 +63,6 @@ public:
 	
 	auto	beginUpdates() -> void;
 	auto	endUpdates() -> void;
-	
-	
-	
-
-private:
-	struct			Extras;
-	sptr<Extras>	_extras{};
-	
-	TableView(id, sptr<Extras>);
 };
 
 

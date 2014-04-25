@@ -103,6 +103,16 @@ Rect::operator CGRect() const
 	return	_cgrect;
 }
 
+auto
+Rect::origin() const -> Point
+{
+	return	_cgrect.origin;
+}
+auto
+Rect::size() const -> Size
+{
+	return	_cgrect.size;
+}
 
 
 

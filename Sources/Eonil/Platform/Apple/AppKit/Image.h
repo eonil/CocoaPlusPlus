@@ -1,8 +1,8 @@
 //
-//  Responder.h
+//  Image.h
 //  Cocoa++
 //
-//  Created by Hoon H. on 4/20/14.
+//  Created by Hoon H. on 14/4/25.
 //  Copyright (c) 2014 Eonil. All rights reserved.
 //
 
@@ -16,15 +16,16 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
 
-/*!
- Wraps `NSResponder`.
- Take care that you have to order to show the window.
- */
+
 class
-Responder : protected Foundation::Object
+Image : public Foundation::Object
 {
 public:
 	using	Object::Object;
+	
+public:
+	static auto	imageWithSize(Size) -> Image;
+	static auto	image(CoreGraphics::Image) -> Image;
 };
 
 

@@ -54,7 +54,6 @@ public:
 	
 	auto		height() const -> Float const;
 	auto		setHeight(Float) -> void;
-	
 };
 
 class
@@ -68,7 +67,10 @@ public:
 	Rect(Float const x, Float const y, Float const width, Float const height);
 	Rect(CGRect const);
 	
-	operator CGRect() const;
+	auto	origin() const -> Point;
+	auto	size() const -> Size;
+	
+	operator	CGRect() const;
 };
 
 

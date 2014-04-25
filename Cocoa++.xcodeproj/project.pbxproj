@@ -40,6 +40,14 @@
 		45B76BE0190934F2002DF53B /* TableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905021903E1E200E2B04F /* TableView.mm */; };
 		45B76BE1190934F2002DF53B /* Responder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905271903E9F400E2B04F /* Responder.mm */; };
 		45B76BE2190934F2002DF53B /* Window.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905061903E1E200E2B04F /* Window.mm */; };
+		45B76BFD19097C86002DF53B /* Pasteboard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76BFB19097C86002DF53B /* Pasteboard.mm */; };
+		45B76C0019097D10002DF53B /* String.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76BFE19097D10002DF53B /* String.mm */; };
+		45B76C0319098401002DF53B /* DraggingDestination.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C0119098401002DF53B /* DraggingDestination.mm */; };
+		45B76C0A19099914002DF53B /* Array.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C0819099914002DF53B /* Array.mm */; };
+		45B76C0D19099DE5002DF53B /* Data.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C0B19099DE5002DF53B /* Data.mm */; };
+		45B76C121909B639002DF53B /* ImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C101909B639002DF53B /* ImageView.mm */; };
+		45B76C151909B7BF002DF53B /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C131909B7BF002DF53B /* Image.mm */; };
+		45B76C181909CDEC002DF53B /* SplitView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C161909CDEC002DF53B /* SplitView.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +131,22 @@
 		458444581903D5E900B468A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4584445A1903D5E900B468A7 /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
 		45B76BE719096D30002DF53B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		45B76BFB19097C86002DF53B /* Pasteboard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pasteboard.mm; sourceTree = "<group>"; };
+		45B76BFC19097C86002DF53B /* Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pasteboard.h; sourceTree = "<group>"; };
+		45B76BFE19097D10002DF53B /* String.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = String.mm; sourceTree = "<group>"; };
+		45B76BFF19097D10002DF53B /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
+		45B76C0119098401002DF53B /* DraggingDestination.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DraggingDestination.mm; sourceTree = "<group>"; };
+		45B76C0219098401002DF53B /* DraggingDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggingDestination.h; sourceTree = "<group>"; };
+		45B76C0819099914002DF53B /* Array.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Array.mm; sourceTree = "<group>"; };
+		45B76C0919099914002DF53B /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		45B76C0B19099DE5002DF53B /* Data.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Data.mm; sourceTree = "<group>"; };
+		45B76C0C19099DE5002DF53B /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		45B76C101909B639002DF53B /* ImageView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageView.mm; sourceTree = "<group>"; };
+		45B76C111909B639002DF53B /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
+		45B76C131909B7BF002DF53B /* Image.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Image.mm; sourceTree = "<group>"; };
+		45B76C141909B7BF002DF53B /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		45B76C161909CDEC002DF53B /* SplitView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SplitView.mm; sourceTree = "<group>"; };
+		45B76C171909CDEC002DF53B /* SplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,14 +209,24 @@
 			children = (
 				453905391904028500E2B04F /* Color.mm */,
 				4539053A1904028500E2B04F /* Color.h */,
+				45B76C131909B7BF002DF53B /* Image.mm */,
+				45B76C141909B7BF002DF53B /* Image.h */,
 				453905041903E1E200E2B04F /* View.mm */,
 				453905031903E1E200E2B04F /* View.h */,
 				453905001903E1E200E2B04F /* Control.mm */,
 				453904FF1903E1E200E2B04F /* Control.h */,
+				45B76C101909B639002DF53B /* ImageView.mm */,
+				45B76C111909B639002DF53B /* ImageView.h */,
+				45B76C161909CDEC002DF53B /* SplitView.mm */,
+				45B76C171909CDEC002DF53B /* SplitView.h */,
 				453905021903E1E200E2B04F /* TableView.mm */,
 				453905011903E1E200E2B04F /* TableView.h */,
 				453905271903E9F400E2B04F /* Responder.mm */,
 				453905281903E9F400E2B04F /* Responder.h */,
+				45B76BFB19097C86002DF53B /* Pasteboard.mm */,
+				45B76BFC19097C86002DF53B /* Pasteboard.h */,
+				45B76C0119098401002DF53B /* DraggingDestination.mm */,
+				45B76C0219098401002DF53B /* DraggingDestination.h */,
 				453905061903E1E200E2B04F /* Window.mm */,
 				453905051903E1E200E2B04F /* Window.h */,
 			);
@@ -234,6 +268,12 @@
 			children = (
 				4539050D1903E1E200E2B04F /* Object.mm */,
 				4539050C1903E1E200E2B04F /* Object.h */,
+				45B76C0B19099DE5002DF53B /* Data.mm */,
+				45B76C0C19099DE5002DF53B /* Data.h */,
+				45B76C0819099914002DF53B /* Array.mm */,
+				45B76C0919099914002DF53B /* Array.h */,
+				45B76BFE19097D10002DF53B /* String.mm */,
+				45B76BFF19097D10002DF53B /* String.h */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -476,11 +516,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B76C0319098401002DF53B /* DraggingDestination.mm in Sources */,
 				45B76BD9190934F2002DF53B /* Any.mm in Sources */,
 				45B76BDA190934F2002DF53B /* None.mm in Sources */,
 				45B76BDB190934F2002DF53B /* Layer.mm in Sources */,
+				45B76BFD19097C86002DF53B /* Pasteboard.mm in Sources */,
 				45B76BDC190934F2002DF53B /* Object.mm in Sources */,
+				45B76C151909B7BF002DF53B /* Image.mm in Sources */,
+				45B76C121909B639002DF53B /* ImageView.mm in Sources */,
 				45B76BDD190934F2002DF53B /* Color.mm in Sources */,
+				45B76C181909CDEC002DF53B /* SplitView.mm in Sources */,
 				45B76BDE190934F2002DF53B /* View.mm in Sources */,
 				45B76BDF190934F2002DF53B /* Control.mm in Sources */,
 				45B76BE0190934F2002DF53B /* TableView.mm in Sources */,
@@ -491,10 +536,13 @@
 				45B76BD3190934C4002DF53B /* Data.cpp in Sources */,
 				45B76BD4190934C4002DF53B /* Rect.cpp in Sources */,
 				45B76BD5190934C4002DF53B /* Color.cpp in Sources */,
+				45B76C0A19099914002DF53B /* Array.mm in Sources */,
 				45B76BD6190934C4002DF53B /* ColorSpace.cpp in Sources */,
+				45B76C0D19099DE5002DF53B /* Data.mm in Sources */,
 				45B76BD7190934C4002DF53B /* DataProvider.cpp in Sources */,
 				45B76BD8190934C4002DF53B /* Image.cpp in Sources */,
 				45B76BCF19093496002DF53B /* String.cpp in Sources */,
+				45B76C0019097D10002DF53B /* String.mm in Sources */,
 				459DC83D19089F5C00FF6BD2 /* Common.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

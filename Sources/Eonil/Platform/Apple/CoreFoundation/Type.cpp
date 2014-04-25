@@ -40,6 +40,7 @@ Type::Type(Type&& o) : _cftype(o._cftype)
 }
 Type::Type(CFTypeRef o) : _cftype(o)
 {
+	EONIL_COCOA_DEBUG_ASSERT(o != NULL);		//	If you want to make NULL state, use `Type(std::nullptr_t)` constructor explicitly.
 	CFRetain(_cftype);
 }
 Type::~Type()

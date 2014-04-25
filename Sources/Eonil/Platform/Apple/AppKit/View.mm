@@ -8,6 +8,7 @@
 
 #include "View.h"
 #include "../CoreGraphics/Rect.h"
+#include "../Foundation/String.h"
 #include "../CoreAnimation/Layer.h"
 
 
@@ -89,6 +90,55 @@ View::setLayer(CoreAnimation::Layer o) -> void
 //}
 
 
+
+
+
+
+
+
+
+
+
+auto
+View::registerForDraggedTypes(const vec<Foundation::String> &UTIs) -> void
+{
+	NSMutableArray*	a1	=	[[NSMutableArray alloc] init];
+	for (Foundation::String const& s1: UTIs)
+	{
+		[a1 addObject:s1];
+	}
+	
+	////
+	
+	auto	self	=	get_objc_object<NSView>();
+	[self registerForDraggedTypes:a1];
+}
+auto
+View::unregisterDraggedTypes() -> void
+{
+	auto	self	=	get_objc_object<NSView>();
+	[self unregisterDraggedTypes];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END
 
 
@@ -123,8 +173,49 @@ using namespace	Eonil::CocoaCPP::AppKit;
 }
 @end
 @implementation ____CPP_Eonil_Cocoa_OverridableView1
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	return	NSDragOperation(overridings->draggingEntered(DraggingInfo{sender}));
+}
+- (NSDragOperation)draggingUpdated:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	return	NSDragOperation(overridings->draggingUpdated(sender));
+}
+- (void)draggingEnded:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	overridings->draggingEnded(sender);
+}
+- (void)draggingExited:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	overridings->draggingExited(sender);
+}
+- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	return	toOBJC(overridings->prepareForDragOperation(sender));
+}
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	return	toOBJC(overridings->performDragOperation(sender));
+}
+- (void)concludeDragOperation:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	overridings->concludeDragOperation(sender);
+}
+- (void)updateDraggingItemsForDrag:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	overridings->updateDraggingItemsForDrag(sender);
+}
 - (void)viewDidMoveToSuperview
 {
+	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
 	[super viewDidMoveToSuperview];
 	if (self->overridings != nullptr)
 	{

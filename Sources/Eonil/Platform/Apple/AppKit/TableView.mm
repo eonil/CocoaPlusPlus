@@ -27,7 +27,6 @@ using namespace	Eonil::CocoaCPP::AppKit;
 @public
 	struct
 	{
-		TableView				cpp_tv{nullptr};
 		TableView::Delegate*	cpp_delegate;
 	}
 	slots;
@@ -37,7 +36,7 @@ using namespace	Eonil::CocoaCPP::AppKit;
 @implementation ____Eonil_Cocoa_TableView_Delegate
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
-	return	slots.cpp_delegate->heightOfRow(slots.cpp_tv, row);
+	return	slots.cpp_delegate->heightOfRow(tableView, row);
 }
 @end
 
@@ -67,14 +66,14 @@ TableColumn::tableColume() -> TableColumn
 auto
 TableColumn::width() const -> Float
 {
-	auto	tc1		=	get_objc_object<NSTableColumn>();
-	return	[tc1 width];
+	auto	self	=	get_objc_object<NSTableColumn>();
+	return	[self width];
 }
 auto
 TableColumn::setWidth(Float o) -> void
 {
-	auto	tc1		=	get_objc_object<NSTableColumn>();
-	[tc1 setWidth:o];
+	auto	self	=	get_objc_object<NSTableColumn>();
+	[self setWidth:o];
 }
 
 
@@ -95,47 +94,32 @@ TableColumn::setWidth(Float o) -> void
 
 
 
-
-struct
-TableView::Extras
-{
-	__strong ____Eonil_Cocoa_TableView_Delegate*		objc_delegate	{[[____Eonil_Cocoa_TableView_Delegate alloc] init]};
-};
 
 auto
 TableView::tableView() -> TableView
 {
-	TableView		tv		=	{[[NSTableView alloc] init]};
-	sptr<Extras>	extras	=	sptr<Extras>(new Extras());
-	
-	extras->objc_delegate->slots.cpp_tv		=	tv;
-	
-	return			tv;
-}
-TableView::TableView(id o, sptr<Extras> extras) : Control(o), _extras(extras)
-{
+	return	[[NSTableView alloc] init];
 }
 
 auto
 TableView::delegate() const -> Delegate*
 {
-	return	_extras->objc_delegate->slots.cpp_delegate;
+	auto									self	=	get_objc_object<NSTableView>();
+	____Eonil_Cocoa_TableView_Delegate*		d1		=	[self delegate];
+	Delegate*								d2		=	d1->slots.cpp_delegate;
+	return									d2;
 }
 auto
 TableView::setDelegate(TableView::Delegate *o) -> void
 {
-	_extras->objc_delegate->slots.cpp_delegate	=	o;
-	
-	auto	tv1		=	get_objc_object<NSTableView>();
-	[tv1 setDelegate:_extras->objc_delegate];
+	auto	self	=	get_objc_object<NSTableView>();
+	[self setDelegate:*o];
 }
 auto
 TableView::unsetDelegate() -> void
 {
-	auto	tv1		=	get_objc_object<NSTableView>();
-	[tv1 setDelegate:nil];
-	
-	_extras->objc_delegate->slots.cpp_delegate	=	nullptr;
+	auto	self	=	get_objc_object<NSTableView>();
+	[self setDelegate:nil];
 }
 
 auto
@@ -144,8 +128,8 @@ addTableColumn(TableColumn o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSTableColumn);
 	
-	auto	tv1		=	get_objc_object<NSTableView>();
-	[tv1 addTableColumn:o];
+	auto	self	=	get_objc_object<NSTableView>();
+	[self addTableColumn:o];
 }
 auto
 TableView::
@@ -153,23 +137,23 @@ removeTableColumn(TableColumn o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSTableColumn);
 	
-	auto	tv1		=	get_objc_object<NSTableView>();
-	[tv1 removeTableColumn:o];
+	auto	self	=	get_objc_object<NSTableView>();
+	[self removeTableColumn:o];
 }
 
 auto
 TableView::
 beginUpdates() -> void
 {
-	auto	tv1		=	get_objc_object<NSTableView>();
-	[tv1 beginUpdates];
+	auto	self	=	get_objc_object<NSTableView>();
+	[self beginUpdates];
 }
 auto
 TableView::
 endUpdates() -> void
 {
-	auto	tv1		=	get_objc_object<NSTableView>();
-	[tv1 endUpdates];
+	auto	self	=	get_objc_object<NSTableView>();
+	[self endUpdates];
 }
 
 

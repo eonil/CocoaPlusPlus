@@ -8,12 +8,14 @@
 
 #include "Window.h"
 #include "../CoreGraphics/Rect.h"
+#include "../Foundation/String.h"
 #include "View.h"
 
 
 
 
 using namespace	Eonil::CocoaCPP;
+using namespace	Eonil::CocoaCPP::Foundation;
 using namespace	Eonil::CocoaCPP::AppKit;
 
 @interface	____Eonil_Cocoa_WindowDelegate : NSObject <NSWindowDelegate>
@@ -21,7 +23,6 @@ using namespace	Eonil::CocoaCPP::AppKit;
 @public
 	struct
 	{
-		Window					cpp_window		{nullptr};
 		Window::Delegate*		cpp_delegate	{nullptr};
 	}
 	slots;
@@ -30,7 +31,48 @@ using namespace	Eonil::CocoaCPP::AppKit;
 @implementation	____Eonil_Cocoa_WindowDelegate
 - (BOOL)windowShouldClose:(id)sender
 {
-	return	slots.cpp_delegate->shouldClose();
+	return	toOBJC(slots.cpp_delegate->windowShouldClose(sender));
+}
+
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	return	NSDragOperation(self->slots.cpp_delegate->draggingEntered(sender));
+}
+- (NSDragOperation)draggingUpdated:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	return	NSDragOperation(self->slots.cpp_delegate->draggingUpdated(sender));
+}
+- (void)draggingEnded:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	self->slots.cpp_delegate->draggingEnded(sender);
+}
+- (void)draggingExited:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	self->slots.cpp_delegate->draggingExited(sender);
+}
+- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	return	toOBJC(self->slots.cpp_delegate->prepareForDragOperation(sender));
+}
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	return	toOBJC(self->slots.cpp_delegate->performDragOperation(sender));
+}
+- (void)concludeDragOperation:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	self->slots.cpp_delegate->concludeDragOperation(sender);
+}
+- (void)updateDraggingItemsForDrag:(id<NSDraggingInfo>)sender
+{
+	EONIL_COCOA_DEBUG_ASSERT(self->slots.cpp_delegate != nullptr);
+	self->slots.cpp_delegate->updateDraggingItemsForDrag(sender);
 }
 @end
 
@@ -43,17 +85,16 @@ using namespace	Eonil::CocoaCPP::AppKit;
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
-struct
-Window::Extras
+
+
+Window::Delegate::Delegate() : Any([[____Eonil_Cocoa_WindowDelegate alloc] init])
 {
-	____Eonil_Cocoa_WindowDelegate*	delegate	{};
-};
-
-
-
-Window::Window(id o1, sptr<Extras> o2) : Responder(o1), _extras(o2)
-{
+	auto	self	=	get_objc_object<____Eonil_Cocoa_WindowDelegate>();
+	self->slots.cpp_delegate	=	this;
 }
+
+
+
 
 auto
 Window::window() -> Window
@@ -96,80 +137,131 @@ Window::setStyleMask(Eonil::CocoaCPP::AppKit::Window::STYLE o) -> void
 auto
 Window::delegate() const -> Delegate*
 {
-	return	_extras->delegate->slots.cpp_delegate;
+	auto	self	=	get_objc_object<NSWindow>();
+	____Eonil_Cocoa_WindowDelegate*		d1	=	[self delegate];
+	Window::Delegate*					d2	=	d1->slots.cpp_delegate;
+	
+	return	d2;
 }
 auto
 Window::setDelegate(Delegate *o) -> void
 {
-	_extras->delegate->slots.cpp_delegate	=	o;
-	__unsafe_unretained NSWindow*	window	=	operator __unsafe_unretained id();
-	[window setDelegate:_extras->delegate];
+	__unsafe_unretained NSWindow*	self	=	operator __unsafe_unretained id();
+	[self setDelegate:*o];
 }
 auto
 Window::unsetDelegate() -> void
 {
-	__unsafe_unretained NSWindow*	window	=	operator __unsafe_unretained id();
-	[window setDelegate:nil];
-	_extras->delegate->slots.cpp_delegate	=	nullptr;
+	__unsafe_unretained NSWindow*	self	=	operator __unsafe_unretained id();
+	[self setDelegate:nil];
 }
 
 auto
 Window::isVisible() const -> bool
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	return	toCPP([w1 isVisible]);
+	auto	self	=	get_objc_object<NSWindow>();
+	return	toCPP([self isVisible]);
 }
 auto
 Window::orderFront() -> void
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	[w1 orderFront:nil];
+	auto	self	=	get_objc_object<NSWindow>();
+	[self orderFront:nil];
 }
 auto
 Window::orderOut() -> void
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	[w1 orderOut:nil];
+	auto	self	=	get_objc_object<NSWindow>();
+	[self orderOut:nil];
 }
 
 auto
 Window::isKeyWindow() const -> bool
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	return	toCPP([w1 isKeyWindow]);
+	auto	self	=	get_objc_object<NSWindow>();
+	return	toCPP([self isKeyWindow]);
 }
 auto
 Window::makeKey() -> void
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	[w1 makeKeyWindow];
+	auto	self	=	get_objc_object<NSWindow>();
+	[self makeKeyWindow];
 }
 
 auto
 Window::frame() const -> Rect
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	return	[w1 frame];
+	auto	self	=	get_objc_object<NSWindow>();
+	return	[self frame];
 }
 auto
 Window::setFrame(Rect f1, bool animated) -> void
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	[w1 setFrame:f1 display:isVisible() animate:animated];
+	auto	self	=	get_objc_object<NSWindow>();
+	[self setFrame:f1 display:isVisible() animate:animated];
+}
+
+auto
+Window::setContentSize(Size o) -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self setContentSize:o];
 }
 
 auto
 Window::contentView() const -> View
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	return	[w1 contentView];
+	auto	self	=	get_objc_object<NSWindow>();
+	return	[self contentView];
 }
 auto
 Window::setContentView(Eonil::CocoaCPP::AppKit::View o) -> void
 {
-	auto	w1	=	get_objc_object<NSWindow>();
-	[w1 setContentView:o];
+	auto	self	=	get_objc_object<NSWindow>();
+	[self setContentView:o];
 }
+
+auto
+Window::title() const -> String
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	return	[self title];
+}
+auto
+Window::setTitle(Foundation::String o) -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self setTitle:o];
+}
+auto
+Window::setTitleWithRepresentativeFilename(Foundation::String filename) -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self setTitleWithRepresentedFilename:filename];
+}
+
+auto
+Window::registerForDraggedTypes(const vec<Foundation::String> &UTIs) -> void
+{
+	NSMutableArray*	a1	=	[[NSMutableArray alloc] init];
+	for (Foundation::String const& s1: UTIs)
+	{
+		[a1 addObject:s1];
+	}
+	
+	////
+	
+	auto	self	=	get_objc_object<NSWindow>();
+	[self registerForDraggedTypes:a1];
+}
+auto
+Window::unregisterDraggedTypes() -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self unregisterDraggedTypes];
+}
+
+
 
 
 
