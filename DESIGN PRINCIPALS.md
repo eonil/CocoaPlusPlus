@@ -16,25 +16,17 @@ DESIGN PRINCIPALS
 	Major reason of this library is avoiding mistakes. Objective-C is too much mistake-prone
 	language, and overriding a method by mistake is too easy, and there's no warning.
 	As a result, managing those feature overriding are very hard.
+	
+	Also, encapsulation is hard in Objective-C. There's no private method, and all the classes
+	are always public. No namespace. It's hard to structure complex program in hierarchical way.
+	C++ can provide better way of program structuring.
 
 
 
 
 
 
--	Treat object as an object.
-
-	Though these objects are wrapping an Objective-C object pointer, they don't work like a pointer.
-	They reflect underlying objective behaviors.
-
-	If you copy the object, it will actually perform copying of the underlying object by calling `copy`
-	method. If you perform equality comparison, then it will invoke `isEqual:` method.
-
-
-
-
-
--	All wrapper classes are just thin wrappers around pointers to Objective-C objects.
+-	All wrapper classes are just thin wrappers around pointers to Objective-C object pointers.
 	Conceptually, a class is something like this;
 	
 		typedef		NSView*		View;
@@ -48,10 +40,10 @@ DESIGN PRINCIPALS
 		};
 
 
-	Then, copy is bare pointer copy, not a semantic deep copy. If you want to perform semantic copy then
-	you have you call `copy` method just like an Objective-C object.
+	Then, copy is bare pointer copy, not a semantic deep copy. If you want to perform semantic copy,
+	then you have to call `copy` method just like an Objective-C object.
 
-	Anyway, unlike Objective-C, copy method is not implemented by default. This is formal convention to name
+	Anyway, unlike Objective-C, copy method is not provided by default. It is a formal convention naming
 	semantic copy method as `copy`, so you can call the method just if a class has it.
 
 
@@ -72,17 +64,18 @@ DESIGN PRINCIPALS
 			CGColorRef		_raw_ptr{nullptr};
 		};
 
+	`CFType` object wrappers performs automatic reference-counting. (yes, it works exactly like
+	Objective-C ARC works!)
 
 
 
 
 
-
--	Type Check.
+-	Type Checks.
 	`CFType` based classes are checked by imported CoreFoundation C symbols.
-	Objective-C classes are not checked when creating yet, but will be checked
+	Objective-C classes are not checked when creating (yet), but will be checked
 	when calling any method. This is mainly to avoid importing Objective-C symbols.
-	Type-check can be added later using forward declaration trick.
+	I hope to add type-checks when creating object instances.
 
 
 
@@ -102,15 +95,24 @@ Keep it simple by decomposing each features
 -	Base classes are not exposed directly by default.
 	
 	To keep simplicity, all base class functionalities will not be exposed directly.
-	Instead, every classes will have `as~` series method to provide access to base class features.
-	Where appropriate, some base class features may be exposed directly. This is fully case-by-case, but hiding is the default choice.
+	Instead, classes may have `as~` series method to provide access to base class features.
+	Where appropriate, some base class features may be exposed directly. This is fully case-by-case, 
+	and hiding is the default choice.
 
 
 
 -	No direct overriding.
 
-	If you want to override a method, you should subclass correspoding `Observer` class,
-	and set it to the instance.
+	Cocoa uses observer pattern primarily rather then overriding, and
+	usually overriding is wrong pattern. In most cases we don't need method overriding.
+	Anyway some ancient Cocoa classes are still using method overriding to implement observer
+	pattern (yes, that's wrong!), and those classes needs special treatment.
+
+	I am currently using several different approaches to provide method overriding mechanism,
+	but none of them are overriding C++ method directly. Every features will be separated into
+	a separated observer class. Usually they will become a part of delegate object. I believe
+	this is patching a design bugs in old Cocoa classes.
+
 	
 	
 	
