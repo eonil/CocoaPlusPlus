@@ -36,7 +36,7 @@ public:
 	auto	equals(String) const -> bool;
 	auto	copy() const -> String;
 	
-	auto	UTF8String() const -> char const*;
+	auto	UTF8String() const -> char const*;					
 	
 public:
 	auto	length() const -> UInteger;

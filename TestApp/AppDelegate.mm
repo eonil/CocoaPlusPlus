@@ -107,9 +107,9 @@ Core
 	{
 		for (UInteger i=0; i<1024*1024; i++)
 		{
-//			Foundation::Object			o1		=	Foundation::Object::object();
-//			Foundation::String			s1		=	Foundation::String::stringWithUTF8String(s0);
-			Foundation::AnytypeArray	a1		=	Foundation::AnytypeArray::anytypeArray();
+			Foundation::Object			o1		=	Foundation::Object::object();
+			Foundation::String			s1		=	Foundation::String::stringWithUTF8String(s0);
+//			Foundation::AnytypeArray	a1		=	Foundation::AnytypeArray::anytypeArray();
 		}
 	}
 }

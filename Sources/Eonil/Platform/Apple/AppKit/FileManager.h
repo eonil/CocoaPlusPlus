@@ -26,6 +26,7 @@ FileManager : public Foundation::Object
 	
 public:
 	static auto		defaultManager() -> FileManager;
+	static auto		fileManager() -> FileManager;
 	
 public:
 	class

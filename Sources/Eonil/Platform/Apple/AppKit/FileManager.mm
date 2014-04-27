@@ -70,7 +70,11 @@ FileManager::defaultManager() -> FileManager
 {
 	return	[NSFileManager defaultManager];
 }
-
+auto
+FileManager::fileManager() -> FileManager
+{
+	return	[[NSFileManager alloc] init];
+}
 
 
 auto
