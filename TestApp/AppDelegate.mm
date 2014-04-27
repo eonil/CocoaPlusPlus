@@ -45,6 +45,7 @@
 #include "Window.h"
 #include "TableView.h"
 #include "Layer.h"
+#include "../Sources/Eonil/Platform/Apple/Cocoa.h"
 #include "../Sources/Eonil/Platform/Apple/AppKit/Color.h"
 #include "../Sources/Eonil/Platform/Apple/CoreGraphics/Color.h"
 
@@ -101,6 +102,16 @@ Core
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	_test1	=	std::unique_ptr<Core>(new Core());
+	
+	char const*	s0	=	"AAA";
+	{
+		for (UInteger i=0; i<1024*1024; i++)
+		{
+//			Foundation::Object			o1		=	Foundation::Object::object();
+//			Foundation::String			s1		=	Foundation::String::stringWithUTF8String(s0);
+			Foundation::AnytypeArray	a1		=	Foundation::AnytypeArray::anytypeArray();
+		}
+	}
 }
 - (void)applicationWillTerminate:(NSNotification *)notification
 {

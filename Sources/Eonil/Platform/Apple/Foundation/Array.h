@@ -34,6 +34,9 @@ public:
 	auto	copy() const -> AnytypeArray;
 	
 	auto	vector() const -> vec<Any>;
+	
+public:
+	static auto		anytypeArray() -> AnytypeArray;
 };
 
 

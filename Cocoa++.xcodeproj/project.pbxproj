@@ -31,7 +31,7 @@
 		45B76BD6190934C4002DF53B /* ColorSpace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDF01908944E008B6530 /* ColorSpace.cpp */; };
 		45B76BD7190934C4002DF53B /* DataProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDD519088E78008B6530 /* DataProvider.cpp */; };
 		45B76BD8190934C4002DF53B /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDC919088AC9008B6530 /* Image.cpp */; };
-		45B76BD9190934F2002DF53B /* Any.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905101903E1E200E2B04F /* Any.mm */; };
+		45B76BD9190934F2002DF53B /* Any.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905101903E1E200E2B04F /* Any.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		45B76BDA190934F2002DF53B /* None.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905121903E1E200E2B04F /* None.mm */; };
 		45B76BDB190934F2002DF53B /* Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4539052D1903ED9800E2B04F /* Layer.mm */; };
 		45B76BDC190934F2002DF53B /* Object.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4539050D1903E1E200E2B04F /* Object.mm */; };

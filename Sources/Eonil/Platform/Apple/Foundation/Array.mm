@@ -82,6 +82,11 @@ AnytypeArray::vector() const -> vec<Any>
 	return	a1;
 }
 
+auto
+AnytypeArray::anytypeArray() -> AnytypeArray
+{
+	return	[[NSArray alloc] init];
+}
 
 
 

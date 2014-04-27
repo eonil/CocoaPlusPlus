@@ -8,6 +8,8 @@
 
 #include "Any.h"
 
+#include <objc/runtime.h>
+
 EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 
 
@@ -19,13 +21,53 @@ Any::Any(std::nullptr_t) : _objc_object_ptr(nil)
 }
 Any::Any(__unsafe_unretained id o) : _objc_object_ptr(o)
 {
-	
+	[_objc_object_ptr retain];
+}
+Any::~Any()
+{
+	[_objc_object_ptr release];
+	_objc_object_ptr	=	nil;
 }
 
 Any::operator __unsafe_unretained id() const
 {
 	return	_objc_object_ptr;
 }
+
+
+
+
+
+Any::Any(Any const& o) : _objc_object_ptr(o._objc_object_ptr)
+{
+	[_objc_object_ptr retain];
+}
+Any::Any(Any&& o) : _objc_object_ptr(o._objc_object_ptr)
+{
+	[o._objc_object_ptr release];
+	o._objc_object_ptr	=	nil;
+}
+
+auto
+Any::operator=(const Eonil::CocoaCPP::Any &o) -> Any&
+{
+	Any	copy	=	o;
+	std::swap(copy._objc_object_ptr, _objc_object_ptr);
+	return	*this;
+}
+auto
+Any::operator=(Eonil::CocoaCPP::Any &&o) -> Any&
+{
+	_objc_object_ptr	=	o._objc_object_ptr;
+	o._objc_object_ptr	=	nil;
+	return	*this;
+}
+
+
+
+
+
+
 
 //auto
 //Any::copy() const -> Any

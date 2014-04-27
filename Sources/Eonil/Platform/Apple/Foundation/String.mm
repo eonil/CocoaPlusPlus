@@ -121,9 +121,9 @@ String::substringToIndex(UInteger o) const -> String
 
 
 auto
-String::withUTF8String(char const* o) -> String
+String::stringWithUTF8String(char const* o) -> String
 {
-	return	String{[NSString stringWithUTF8String:o]};
+	return	String{[[NSString alloc] initWithUTF8String:o]};
 }
 
 

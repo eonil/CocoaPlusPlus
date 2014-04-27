@@ -19,6 +19,52 @@ using namespace	Foundation;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+auto
+FileManager::DirectoryEnumerator::nextObject() -> Foundation::String
+{
+	@autoreleasepool
+	{
+		auto	self	=	get_objc_object<NSDirectoryEnumerator>();
+		id		obj1	=	[self nextObject];
+		
+		return	obj1;
+	}
+}
+auto
+FileManager::DirectoryEnumerator::level() const -> UInteger
+{
+	auto	self	=	get_objc_object<NSDirectoryEnumerator>();
+	return	[self level];
+}
+auto
+FileManager::DirectoryEnumerator::skipDescendants() -> void
+{
+	auto	self	=	get_objc_object<NSDirectoryEnumerator>();
+	[self skipDescendants];
+}
+
+
+
+
+
+
+
+
+
+
 auto
 FileManager::defaultManager() -> FileManager
 {
@@ -42,6 +88,17 @@ FileManager::fileExistsAtPathAsDirectory(Foundation::String o) const -> bool
 	return	toCPP(res1 && isdir);
 }
 
+auto
+FileManager::enumeratorAtPath(Foundation::String path) const -> DirectoryEnumerator
+{
+	@autoreleasepool
+	{
+		auto	self	=	get_objc_object<NSFileManager>();
+		auto	direnum	=	[self enumeratorAtPath:path];
+		
+		return	DirectoryEnumerator(direnum);
+	}
+}
 
 
 

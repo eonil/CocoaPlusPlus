@@ -28,8 +28,23 @@ public:
 	static auto		defaultManager() -> FileManager;
 	
 public:
+	class
+	DirectoryEnumerator : public Foundation::Object
+	{
+	public:
+		using	Object::Object;
+		
+		auto	nextObject() -> Foundation::String;
+		
+		auto	level() const -> UInteger;
+		auto	skipDescendants() -> void;
+	};
+	
+public:
 	auto	fileExistsAtPath(Foundation::String) const -> bool;
 	auto	fileExistsAtPathAsDirectory(Foundation::String) const -> bool;
+	
+	auto	enumeratorAtPath(Foundation::String path) const -> DirectoryEnumerator;
 	
 private:
 	using	Object::Object;

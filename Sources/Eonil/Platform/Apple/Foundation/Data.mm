@@ -52,7 +52,7 @@ Data::writeToURLAtomically(Eonil::CocoaCPP::Foundation::URL o) const -> bool
 auto
 Data::dataWithBytes(const void *bytes, UInteger length) -> Data
 {
-	return	[NSData dataWithBytes:bytes length:length];
+	return	[[NSData alloc] initWithBytes:bytes length:length];
 }
 
 

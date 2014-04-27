@@ -33,8 +33,16 @@ public:
 	Any() = delete;
 	Any(std::nullptr_t);
 	Any(__unsafe_unretained id);
+	~Any();
 	
 	operator __unsafe_unretained id() const;
+	
+public:
+	Any(Any const&);
+	Any(Any&&);
+	
+	auto	operator=(Any const&) -> Any&;
+	auto	operator=(Any&&) -> Any&;
 	
 public:
 //	auto	copy() const -> Any;
@@ -53,7 +61,7 @@ protected:
 		/*!
 		 This assertion is activated only on Objective-C context.
 		 */
-		EONIL_COCOA_ASSERT_OBJC_TYPE(_objc_object_ptr, T);
+		EONIL_COCOA_ASSERT_OBJC_TYPE_OR_NIL(_objc_object_ptr, T);
 		return	_objc_object_ptr;
 	}
 	

@@ -48,7 +48,7 @@ public:
 	auto	substringToIndex(UInteger) const -> String;
 	
 public:
-	static auto		withUTF8String(char const*) -> String;
+	static auto		stringWithUTF8String(char const*) -> String;
 };
 
 

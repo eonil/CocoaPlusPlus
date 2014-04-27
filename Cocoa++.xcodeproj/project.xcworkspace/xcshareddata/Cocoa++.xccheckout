@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B53AC58F-B4DB-4D8F-8B62-1AA600D26E7B</string>
+	<string>2933E777-7505-4981-BE28-9497A184333C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Cocoa++</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>09289BB9-E8CA-4B28-A795-82CB8D23F7C8</key>
+		<key>40DBD4D2-3B8B-4F01-9959-437A799122B3</key>
 		<string>https://github.com/Eonil/CocoaPlusPlus.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Cocoa++.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>09289BB9-E8CA-4B28-A795-82CB8D23F7C8</key>
+		<key>40DBD4D2-3B8B-4F01-9959-437A799122B3</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>09289BB9-E8CA-4B28-A795-82CB8D23F7C8</string>
+	<string>40DBD4D2-3B8B-4F01-9959-437A799122B3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>09289BB9-E8CA-4B28-A795-82CB8D23F7C8</string>
+			<string>40DBD4D2-3B8B-4F01-9959-437A799122B3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Cocoa++</string>
 		</dict>

@@ -45,7 +45,7 @@ URL::path() const -> String
 auto
 URL::urlWithString(Eonil::CocoaCPP::Foundation::String o) -> URL
 {
-	return	[NSURL URLWithString:o];
+	return	[[NSURL alloc] initWithString:o];
 }
 
 
