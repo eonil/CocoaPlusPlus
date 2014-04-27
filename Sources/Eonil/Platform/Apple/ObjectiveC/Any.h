@@ -43,7 +43,17 @@ protected:
 	template <typename T> auto
 	get_objc_object() const ->  __unsafe_unretained T*
 	{
-		EONIL_COCOA_ASSERT_OBJC_TYPE_OR_NIL(_objc_object_ptr, T);
+#ifndef __OBJC__
+		/*!
+		 This method is available only for Objective-C context.
+		 */
+		EONIL_COCOA_DEBUG_ASSERT(false);
+#endif
+		
+		/*!
+		 This assertion is activated only on Objective-C context.
+		 */
+		EONIL_COCOA_ASSERT_OBJC_TYPE(_objc_object_ptr, T);
 		return	_objc_object_ptr;
 	}
 	

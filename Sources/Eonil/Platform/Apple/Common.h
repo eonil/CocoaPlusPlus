@@ -33,8 +33,10 @@
 #include <vector>
 #endif
 
-#import	<CoreFoundation/CoreFoundation.h>
-#import <CoreGraphics/CoreGraphics.h>
+#include <CoreFoundation/CoreFoundation.h>
+#include <CoreGraphics/CoreGraphics.h>
+#include <ImageIO/ImageIO.h>
+#include <CoreServices/CoreServices.h>
 #include <objc/NSObjCRuntime.h>
 
 #ifdef __OBJC__
@@ -62,6 +64,10 @@
 
 EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 
+using	Integer		=	NSInteger;
+using	UInteger	=	NSUInteger;
+UInteger const	UIntegerMax	=	NSUIntegerMax;
+
 template <typename T>	using	uptr	=	std::unique_ptr<T>;
 template <typename T>	using	sptr	=	std::shared_ptr<T>;
 template <typename T>	using	set		=	std::set<T>;
@@ -82,13 +88,24 @@ EONIL_COCOA_DEBUG_ASSERT(bool cond)
 	}
 }
 
+
+
+
+
+
 #ifdef __OBJC__
 #define	EONIL_COCOA_ASSERT_OBJC_TYPE(object,type)				{EONIL_COCOA_DEBUG_ASSERT([object isKindOfClass:[type class]] == YES);}
 #define	EONIL_COCOA_ASSERT_OBJC_TYPE_OR_NIL(object,type)		{EONIL_COCOA_DEBUG_ASSERT(object == nil or [object isKindOfClass:[type class]] == YES);}
-using	Integer		=	NSInteger;
-using	UInteger	=	NSUInteger;
+#else
+#define	EONIL_COCOA_ASSERT_OBJC_TYPE(object,type)
+#define	EONIL_COCOA_ASSERT_OBJC_TYPE_OR_NIL(object,type)
+#endif
 
-UInteger const	UIntegerMax	=	NSUIntegerMax;
+
+
+
+
+#ifdef __OBJC__
 
 static inline auto
 toOBJC(bool o) -> BOOL
@@ -126,6 +143,7 @@ class	Color;
 class	ColorSpace;
 class	DataProvider;
 class	Image;
+class	ImageDestination;
 EONIL_PLATFORM_APPLE_CORE_GRAPHICS_NAMESPACE_END
 
 EONIL_PLATFORM_APPLE_CORE_ANIMATION_NAMESPACE_BEGIN
@@ -138,6 +156,7 @@ class	String;
 class	Data;
 class	AnytypeArray;
 template <typename T>	class	SpecificTypeArray;
+class	URL;
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_END
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN

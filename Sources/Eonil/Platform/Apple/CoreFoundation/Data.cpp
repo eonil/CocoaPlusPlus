@@ -74,7 +74,22 @@ MutableData::mutableBytePtr() -> UInt8*
 {
 	return	CFDataGetMutableBytePtr(*this);
 }
+auto
+MutableData::setLength(Index o) -> void
+{
+	CFDataSetLength(*this, o);
+}
 
+auto
+MutableData::mutableData() -> MutableData
+{
+	return	CFDataCreateMutable(NULL, 0);
+}
+//auto
+//MutableData::mutableDataWithCapacity(Index capacity) -> MutableData
+//{
+//	return	CFDataCreateMutable(NULL, capacity);
+//}
 auto
 MutableData::mutableCopy(Eonil::CocoaCPP::CoreFoundation::Data o, Index capacity) -> MutableData
 {

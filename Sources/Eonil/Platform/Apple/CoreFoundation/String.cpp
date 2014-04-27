@@ -18,6 +18,7 @@ EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN
 
 
 
+
 String::String(CFStringRef o) : Type(o)
 {
 }

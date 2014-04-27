@@ -53,6 +53,21 @@ namespace
 AnytypeArray::AnytypeArray(vec<Any> const& objects) : Object(_make(objects))
 {
 }
+
+
+auto
+AnytypeArray::equals(Eonil::CocoaCPP::Foundation::AnytypeArray o) const -> bool
+{
+	id	o1	=	*this;
+	return	[o1 isEqualToArray:o];
+}
+auto
+AnytypeArray::copy() const -> AnytypeArray
+{
+	id	o1	=	*this;
+	return	[o1 copy];
+}
+
 auto
 AnytypeArray::vector() const -> vec<Any>
 {

@@ -16,7 +16,7 @@ EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN
 
 
 class
-Data : protected CoreFoundation::Type
+Data : public CoreFoundation::Type
 {
 public:
 	using	Type::Type;
@@ -48,8 +48,11 @@ public:
 	
 public:
 	auto	mutableBytePtr() -> UInt8*;
+	auto	setLength(Index) -> void;
 	
 public:
+	static auto	mutableData() -> MutableData;
+//	static auto	mutableDataWithCapacity(Index capacity) -> MutableData;
 	static auto	mutableCopy(Data, Index capacity) -> MutableData;
 };
 

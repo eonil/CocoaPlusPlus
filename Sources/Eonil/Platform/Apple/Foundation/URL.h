@@ -1,5 +1,5 @@
 //
-//  Data.h
+//  URL.h
 //  Cocoa++
 //
 //  Created by Hoon H. on 14/4/25.
@@ -17,10 +17,10 @@ EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
 
 /*!
- Wraps `NSData`.
+ Wraps `NSURL`.
  */
 class
-Data : protected Object
+URL : protected Object
 {
 public:
 	using	Object::Object;
@@ -28,13 +28,15 @@ public:
 	operator __unsafe_unretained id() const;
 	
 public:
-	auto	equals(Data) const -> bool;
-	auto	copy() const -> Data;
+//	URL(String);								//!	This copies the string.
 	
-	auto	writeToURLAtomically(URL) const -> bool;
+	auto	equals(URL) const -> bool;
+	auto	copy() const -> URL;
+	
+	auto	path() const -> String;
 	
 public:
-	static auto		dataWithBytes(void const* bytes, UInteger length) -> Data;			//!	Memory content will be copied.
+	static auto		urlWithString(String) -> URL;
 };
 
 

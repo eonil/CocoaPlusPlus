@@ -30,6 +30,9 @@ public:
 public:
 	AnytypeArray(vec<Any> const& objects);
 	
+	auto	equals(AnytypeArray) const -> bool;
+	auto	copy() const -> AnytypeArray;
+	
 	auto	vector() const -> vec<Any>;
 };
 
@@ -48,6 +51,17 @@ public:
 public:
 	SpecificTypeArray(vec<T> const& objects) : AnytypeArray(static_cast<vec<Any> const&>(objects))
 	{
+	}
+	
+	auto
+	equals(SpecificTypeArray o) const -> bool
+	{
+		return	AnytypeArray::equals(o);
+	}
+	auto
+	copy() const -> SpecificTypeArray
+	{
+		return	AnytypeArray::copy();
 	}
 	
 	auto

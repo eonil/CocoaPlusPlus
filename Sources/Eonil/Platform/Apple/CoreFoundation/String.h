@@ -16,7 +16,7 @@ EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN
 
 
 class
-String : CoreFoundation::Type
+String : public CoreFoundation::Type
 {
 public:
 	using	Type::Type;

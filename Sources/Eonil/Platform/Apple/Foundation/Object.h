@@ -18,6 +18,23 @@ EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
 
 
+///*!
+// Virtual Objective-C semantic object.
+// */
+//class
+//Semantic
+//{
+//public:
+//	Semantic(Semantic const&);
+//	
+//	auto	operator==(Semantic) const -> bool;
+//	auto	operator!=(Semantic) const -> bool;
+//};
+
+
+
+
+
 class
 Object : public Any
 {

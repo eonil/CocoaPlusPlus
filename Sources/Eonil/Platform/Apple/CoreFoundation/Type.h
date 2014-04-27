@@ -43,6 +43,8 @@ public:
 public:
 	operator	CFTypeRef() const;
 	
+protected:
+	
 private:
 	CFTypeRef	_cftype		{NULL};
 };

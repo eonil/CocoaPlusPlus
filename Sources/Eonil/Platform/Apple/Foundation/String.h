@@ -23,6 +23,9 @@ class
 String : protected Object
 {
 public:
+	using	UNICHAR		=	uint16_t;
+	
+public:
 	using	Object::Object;
 	
 	operator __unsafe_unretained id() const;
@@ -30,7 +33,19 @@ public:
 public:
 	String(char const* utf8String);								//!	This copies the string.
 	
+	auto	equals(String) const -> bool;
+	auto	copy() const -> String;
+	
 	auto	UTF8String() const -> char const*;
+	
+public:
+	auto	length() const -> UInteger;
+	auto	characterAtIndex(UInteger) const -> UNICHAR;
+	auto	hasPrefix(String) const -> bool;
+	auto	hasSuffix(String) const -> bool;
+	auto	stringByAppendingString(String) const -> String;
+	auto	substringFromIndex(UInteger) const -> String;
+	auto	substringToIndex(UInteger) const -> String;
 	
 public:
 	static auto		withUTF8String(char const*) -> String;

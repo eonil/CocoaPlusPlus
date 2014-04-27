@@ -20,7 +20,7 @@ EONIL_PLATFORM_APPLE_CORE_GRAPHICS_NAMESPACE_BEGIN
 
 
 class
-Image : CoreFoundation::Type
+Image : public CoreFoundation::Type
 {
 public:
 	using	Type::Type;

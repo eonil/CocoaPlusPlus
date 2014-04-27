@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		453904D41903DAD700E2B04F /* libEonilCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 458443FB1903327100B468A7 /* libEonilCocoa.a */; };
+		457B61691909FED60021A442 /* ImageDestination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457B61671909FED60021A442 /* ImageDestination.cpp */; };
 		458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
 		4584443B1903D5E800B468A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458444391903D5E800B468A7 /* InfoPlist.strings */; };
 		4584443D1903D5E800B468A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.m */; };
@@ -48,6 +49,9 @@
 		45B76C121909B639002DF53B /* ImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C101909B639002DF53B /* ImageView.mm */; };
 		45B76C151909B7BF002DF53B /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C131909B7BF002DF53B /* Image.mm */; };
 		45B76C181909CDEC002DF53B /* SplitView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C161909CDEC002DF53B /* SplitView.mm */; };
+		45B76C1B1909EF68002DF53B /* FileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C191909EF68002DF53B /* FileManager.mm */; };
+		45B76C1E1909F1C9002DF53B /* URL.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C1C1909F1C9002DF53B /* URL.mm */; };
+		45E28240190CD2F900BB1BB8 /* Test1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45E2823E190CD2F900BB1BB8 /* Test1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,8 @@
 		454FDDF11908944E008B6530 /* ColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpace.h; sourceTree = "<group>"; };
 		454FDDF41908962E008B6530 /* String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
 		454FDDF51908962E008B6530 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
+		457B61671909FED60021A442 /* ImageDestination.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageDestination.cpp; sourceTree = "<group>"; };
+		457B61681909FED60021A442 /* ImageDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDestination.h; sourceTree = "<group>"; };
 		458443FB1903327100B468A7 /* libEonilCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilCocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4584441919033CDC00B468A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4584442E1903D5E800B468A7 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +153,12 @@
 		45B76C141909B7BF002DF53B /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		45B76C161909CDEC002DF53B /* SplitView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SplitView.mm; sourceTree = "<group>"; };
 		45B76C171909CDEC002DF53B /* SplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitView.h; sourceTree = "<group>"; };
+		45B76C191909EF68002DF53B /* FileManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FileManager.mm; sourceTree = "<group>"; };
+		45B76C1A1909EF68002DF53B /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		45B76C1C1909F1C9002DF53B /* URL.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = URL.mm; sourceTree = "<group>"; };
+		45B76C1D1909F1C9002DF53B /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		45E2823E190CD2F900BB1BB8 /* Test1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test1.cpp; sourceTree = "<group>"; };
+		45E2823F190CD2F900BB1BB8 /* Test1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +219,8 @@
 		453904FE1903E1E200E2B04F /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				45B76C191909EF68002DF53B /* FileManager.mm */,
+				45B76C1A1909EF68002DF53B /* FileManager.h */,
 				453905391904028500E2B04F /* Color.mm */,
 				4539053A1904028500E2B04F /* Color.h */,
 				45B76C131909B7BF002DF53B /* Image.mm */,
@@ -259,6 +273,8 @@
 				454FDDD619088E78008B6530 /* DataProvider.h */,
 				454FDDC919088AC9008B6530 /* Image.cpp */,
 				454FDDCA19088AC9008B6530 /* Image.h */,
+				457B61671909FED60021A442 /* ImageDestination.cpp */,
+				457B61681909FED60021A442 /* ImageDestination.h */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -274,6 +290,8 @@
 				45B76C0919099914002DF53B /* Array.h */,
 				45B76BFE19097D10002DF53B /* String.mm */,
 				45B76BFF19097D10002DF53B /* String.h */,
+				45B76C1C1909F1C9002DF53B /* URL.mm */,
+				45B76C1D1909F1C9002DF53B /* URL.h */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -361,6 +379,8 @@
 		458444361903D5E800B468A7 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				45E2823E190CD2F900BB1BB8 /* Test1.cpp */,
+				45E2823F190CD2F900BB1BB8 /* Test1.h */,
 				458444421903D5E800B468A7 /* AppDelegate.h */,
 				458444431903D5E800B468A7 /* AppDelegate.mm */,
 				458444451903D5E800B468A7 /* MainMenu.xib */,
@@ -531,6 +551,9 @@
 				45B76BE0190934F2002DF53B /* TableView.mm in Sources */,
 				45B76BE1190934F2002DF53B /* Responder.mm in Sources */,
 				45B76BE2190934F2002DF53B /* Window.mm in Sources */,
+				457B61691909FED60021A442 /* ImageDestination.cpp in Sources */,
+				45B76C1E1909F1C9002DF53B /* URL.mm in Sources */,
+				45B76C1B1909EF68002DF53B /* FileManager.mm in Sources */,
 				45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */,
 				45B76BD2190934C4002DF53B /* Type.cpp in Sources */,
 				45B76BD3190934C4002DF53B /* Data.cpp in Sources */,
@@ -551,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E28240190CD2F900BB1BB8 /* Test1.cpp in Sources */,
 				458444441903D5E800B468A7 /* AppDelegate.mm in Sources */,
 				4584443D1903D5E800B468A7 /* main.m in Sources */,
 			);

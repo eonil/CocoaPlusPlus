@@ -1,44 +1,12 @@
 //
-//  AppDelegate.m
-//  TestApp
+//  Test1.cpp
+//  Cocoa++
 //
-//  Created by Hoon H. on 4/20/14.
+//  Created by Hoon H. on 14/4/27.
 //  Copyright (c) 2014 Eonil. All rights reserved.
 //
 
-#import "AppDelegate.h"
-
-//#include "Test1.h"
-//
-//@implementation AppDelegate
-//{
-//	std::unique_ptr<Test1>		_test1;
-//}
-//- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-//{
-//	_test1	=	std::unique_ptr<Test1>(new Test1());
-//}
-//- (void)applicationWillTerminate:(NSNotification *)notification
-//{
-//	_test1	=	nullptr;
-//}
-//
-//@end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#include "Test1.h"
 
 
 #include "Rect.h"
@@ -54,7 +22,7 @@ using namespace	Eonil::CocoaCPP::AppKit;
 
 
 struct
-Core
+Test1::Core
 {
 	using	Rect	=	Eonil::CocoaCPP::AppKit::Rect;
 	
@@ -88,23 +56,9 @@ Core
 
 
 
-
-
-
-
-#include "Test1.h"
-
-@implementation AppDelegate
+Test1::Test1() : _core(new Core())
 {
-	std::unique_ptr<Core>		_test1;
 }
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+Test1::~Test1()
 {
-	_test1	=	std::unique_ptr<Core>(new Core());
 }
-- (void)applicationWillTerminate:(NSNotification *)notification
-{
-	_test1	=	nullptr;
-}
-
-@end
