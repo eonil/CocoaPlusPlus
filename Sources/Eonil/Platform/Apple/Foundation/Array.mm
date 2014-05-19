@@ -7,9 +7,10 @@
 //
 
 #include "Array.h"
-
+#include "../ObjectiveC/InternalRawStuffs/ErrorCheck.h"
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
+using namespace	Platform::Debugging;
 
 
 
@@ -20,6 +21,13 @@ EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
 AnytypeArray::operator __unsafe_unretained id() const
 {
+	if (USE_EXCEPTION_CHECKINGS)
+	{
+		InternalRawStuffs::ErrorCheck::crash_if_not_a_kind_of_class<NSArray>(*this);
+	}
+	
+	////
+	
 	return	get_objc_object<NSString>();
 }
 

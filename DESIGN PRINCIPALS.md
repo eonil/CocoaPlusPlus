@@ -26,7 +26,7 @@ DESIGN PRINCIPALS
 
 
 
--	All wrapper classes are just thin wrappers around pointers to Objective-C object pointers.
+-	All wrapper classes are just thin wrappers around Objective-C object pointers.
 	Conceptually, a class is something like this;
 	
 		typedef		NSView*		View;
@@ -43,8 +43,14 @@ DESIGN PRINCIPALS
 	Then, copy is bare pointer copy, not a semantic deep copy. If you want to perform semantic copy,
 	then you have to call `copy` method just like an Objective-C object.
 
-	Anyway, unlike Objective-C, copy method is not provided by default. It is a formal convention naming
-	semantic copy method as `copy`, so you can call the method just if a class has it.
+	Unlike Objective-C classes, copying feature is not provided by default. Only appropriate classes
+	will provide semantic copy method.
+	
+	Semantic equality is also same. Equality comparison operator just performs pointer equality check.
+	And you need to call explicit equals method to perform semantic equality.
+
+
+
 
 
 
@@ -64,7 +70,7 @@ DESIGN PRINCIPALS
 			CGColorRef		_raw_ptr{nullptr};
 		};
 
-	`CFType` object wrappers performs automatic reference-counting. (yes, it works exactly like
+	`CFType` object wrappers performs automatic reference-counting. (yes, it works exactly like how
 	Objective-C ARC works!)
 
 
@@ -79,6 +85,26 @@ DESIGN PRINCIPALS
 
 
 
+
+
+
+
+
+
+
+
+
+-	No toll-free bridging by default.
+	Cocoa supports toll-free bridging between some CF types and some Cocoa classes.
+	It seems possible to support toll-free bridging, but there're bunch of stuffs to care about to support
+	the feature. So currently, I don't support it.
+
+
+
+-	No parameter-less constructor.
+	Parameter-less constructor may cause hard-to-find bugs. Do not use them on wrapper classes.
+	Always use factory method.
+	Anyway, this can be revoked later if it seems to be harmless.
 
 
 
@@ -106,12 +132,12 @@ Keep it simple by decomposing each features
 	Cocoa uses observer pattern primarily rather then overriding, and
 	usually overriding is wrong pattern. In most cases we don't need method overriding.
 	Anyway some ancient Cocoa classes are still using method overriding to implement observer
-	pattern (yes, that's wrong!), and those classes needs special treatment.
+	pattern (which seems to be wrong), and those classes needs special treatment.
 
 	I am currently using several different approaches to provide method overriding mechanism,
 	but none of them are overriding C++ method directly. Every features will be separated into
 	a separated observer class. Usually they will become a part of delegate object. I believe
-	this is patching a design bugs in old Cocoa classes.
+	this is patching a design bugs of old Cocoa classes.
 
 	
 	

@@ -7,9 +7,8 @@
 //
 
 #include "Any.h"
-
+#include "../ObjectiveC/InternalRawStuffs/ErrorCheck.h"
 #include <objc/runtime.h>
-
 EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 
 
@@ -50,6 +49,10 @@ Any::Any(Any&& o) : _objc_object_ptr(o._objc_object_ptr)
 auto
 Any::operator=(const Eonil::CocoaCPP::Any &o) -> Any&
 {
+	/*
+	 Retain first to be safe on self-assignment situation.
+	 */
+	
 	[o._objc_object_ptr retain];
 	[_objc_object_ptr release];
 	

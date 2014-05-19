@@ -9,6 +9,7 @@
 #pragma once
 #include "../Common.h"
 #include "../Foundation/Object.h"
+#include "../Foundation/Date.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
@@ -25,7 +26,7 @@ FileManager : public Foundation::Object
 //	FileManager(FileManager&&) = delete;
 	
 public:
-	static auto		defaultManager() -> FileManager;
+//	static auto		defaultManager() -> FileManager;		//	Disabled because there's some unknown memory leak. I will enabled this again as soon as I fix the leak.
 	static auto		fileManager() -> FileManager;
 	
 public:
@@ -41,9 +42,24 @@ public:
 		auto	skipDescendants() -> void;
 	};
 	
+	class
+	Attributes : public Object
+	{
+		friend class	FileManager;
+		Attributes(id infoDictionary);
+		
+	public:
+		Attributes() = delete;
+		
+		auto	creationDate() const -> Foundation::Date;
+		auto	modificationDate() const -> Foundation::Date;
+		auto	size() const -> uint64_t;
+	};
+	
 public:
 	auto	fileExistsAtPath(Foundation::String) const -> bool;
 	auto	fileExistsAtPathAsDirectory(Foundation::String) const -> bool;
+	auto	attributesOfItemAtPath(Foundation::String path) const -> Attributes;
 	
 	auto	enumeratorAtPath(Foundation::String path) const -> DirectoryEnumerator;
 	

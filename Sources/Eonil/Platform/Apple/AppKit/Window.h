@@ -42,7 +42,7 @@ public:
 		Delegate(Delegate const&) = delete;
 		Delegate(Delegate&&) = delete;
 		
-		virtual auto	windowShouldClose(Window) -> bool		{ return NO; }
+		virtual inline auto		windowShouldClose(Window) -> bool		{ return NO; }
 	};
 
 public:

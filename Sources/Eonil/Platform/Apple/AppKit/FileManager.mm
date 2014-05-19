@@ -8,6 +8,7 @@
 
 #include "FileManager.h"
 #include "../Foundation/String.h"
+#include "../Foundation/Date.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
@@ -18,6 +19,41 @@ using namespace	Foundation;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+FileManager::Attributes::Attributes(id dict1) : Object(dict1)
+{
+}
+auto
+FileManager::Attributes::creationDate() const -> Date
+{
+	auto	self	=	get_objc_object<NSDictionary>();
+	EONIL_COCOA_ASSERT_OBJC_TYPE(self[NSFileCreationDate], NSDate);
+	return	self[NSFileCreationDate];
+}
+auto
+FileManager::Attributes::modificationDate() const -> Date
+{
+	auto	self	=	get_objc_object<NSDictionary>();
+	EONIL_COCOA_ASSERT_OBJC_TYPE(self[NSFileModificationDate], NSDate);
+	return	self[NSFileModificationDate];
+}
+auto
+FileManager::Attributes::size() const -> uint64_t
+{
+	auto	self	=	get_objc_object<NSDictionary>();
+	EONIL_COCOA_ASSERT_OBJC_TYPE(self[NSFileSize], NSNumber);
+	return	[self[NSFileSize] unsignedLongLongValue];
+}
 
 
 
@@ -65,11 +101,11 @@ FileManager::DirectoryEnumerator::skipDescendants() -> void
 
 
 
-auto
-FileManager::defaultManager() -> FileManager
-{
-	return	[NSFileManager defaultManager];
-}
+//auto
+//FileManager::defaultManager() -> FileManager
+//{
+//	return	[NSFileManager defaultManager];
+//}
 auto
 FileManager::fileManager() -> FileManager
 {
@@ -90,6 +126,18 @@ FileManager::fileExistsAtPathAsDirectory(Foundation::String o) const -> bool
 	BOOL	isdir	=	NO;
 	BOOL	res1	=	[self fileExistsAtPath:o isDirectory:&isdir];
 	return	toCPP(res1 && isdir);
+}
+auto
+FileManager::attributesOfItemAtPath(Foundation::String path) const -> Attributes
+{
+	auto	self	=	get_objc_object<NSFileManager>();
+	
+	////
+	
+	NSError*		err1	=	nil;
+	NSDictionary*	att1	=	[self attributesOfItemAtPath:path error:&err1];
+	
+	return	att1;
 }
 
 auto

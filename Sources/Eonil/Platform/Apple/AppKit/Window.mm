@@ -11,9 +11,7 @@
 #include "../Foundation/String.h"
 #include "View.h"
 
-
-
-
+using namespace	Eonil::Platform::Debugging;
 using namespace	Eonil::CocoaCPP;
 using namespace	Eonil::CocoaCPP::Foundation;
 using namespace	Eonil::CocoaCPP::AppKit;
@@ -99,6 +97,13 @@ Window::Delegate::Delegate() : Any([[____Eonil_Cocoa_WindowDelegate alloc] init]
 auto
 Window::window() -> Window
 {
+	if (USE_EXCEPTION_CHECKINGS)
+	{
+		crash_if(NSApp == nil, "You must create `Application` object first before creating any `Window` object.");
+	}
+	
+	////
+
 	return	{[[NSWindow alloc] init]};
 }
 

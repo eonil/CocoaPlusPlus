@@ -7,9 +7,10 @@
 //
 
 #include "String.h"
-
+#include "../ObjectiveC/InternalRawStuffs/ErrorCheck.h"
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
+using namespace	Platform::Debugging;
 static_assert(std::is_same<String::UNICHAR, unichar>::value, "Objective-C `unichar` must be same with String::UNICHAR type.");
 
 
@@ -21,6 +22,13 @@ static_assert(std::is_same<String::UNICHAR, unichar>::value, "Objective-C `unich
 
 String::operator __unsafe_unretained id() const
 {
+	if (USE_EXCEPTION_CHECKINGS)
+	{
+		InternalRawStuffs::ErrorCheck::crash_if_not_a_kind_of_class<NSString>(*this);
+	}
+	
+	////
+	
 	return	get_objc_object<NSString>();
 }
 
@@ -33,6 +41,9 @@ String::operator __unsafe_unretained id() const
 
 
 String::String(char const* utf8string) : Object([NSString stringWithUTF8String:utf8string])
+{
+}
+String::String(std::string const& utf8string) : String(utf8string.c_str())
 {
 }
 
@@ -96,6 +107,12 @@ String::stringByAppendingString(Eonil::CocoaCPP::Foundation::String o) const -> 
 	return	[self stringByAppendingString:o];
 }
 auto
+String::stringByAppendingPathComponent(Eonil::CocoaCPP::Foundation::String o) const -> String
+{
+	auto	self	=	get_objc_object<NSString>();
+	return	[self stringByAppendingPathComponent:o];
+}
+auto
 String::substringFromIndex(UInteger o) const -> String
 {
 	auto	self	=	get_objc_object<NSString>();
@@ -124,6 +141,11 @@ auto
 String::stringWithUTF8String(char const* o) -> String
 {
 	return	String{[[NSString alloc] initWithUTF8String:o]};
+}
+auto
+String::stringWithUTF8String(std::string const& o) -> String
+{
+	return	stringWithUTF8String(o.c_str());
 }
 
 

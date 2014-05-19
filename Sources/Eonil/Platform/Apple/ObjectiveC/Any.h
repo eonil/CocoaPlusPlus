@@ -12,19 +12,22 @@
 EONIL_PLATFORM_APPLE_NAMESPACE_BEGIN
 
 
-/*!
- Represents semantical behavior of an Objective-C object.
- */
-class
-Content
-{
-	
-};
+///*!
+// Represents semantical behavior of an Objective-C object.
+// */
+//class
+//Content
+//{
+//	
+//};
 
 
 /*!
  Wraps semantics of Objective-C `id` type.
  Each object uniquely owns an underlying Objective-C object.
+ 
+ @note
+ You must use `nullptr` explicitly to make `nil` state.
  */
 class
 Any

@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		453904D41903DAD700E2B04F /* libEonilCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 458443FB1903327100B468A7 /* libEonilCocoa.a */; };
+		45478F661929FAA6009E72B8 /* ClassTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45478F641929FAA6009E72B8 /* ClassTemplate.cpp */; };
+		45478F6A1929FB8B009E72B8 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45478F681929FB8B009E72B8 /* Exception.cpp */; };
+		45478F7D1929FFA7009E72B8 /* ErrorCheck.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F7B1929FFA7009E72B8 /* ErrorCheck.mm */; };
+		45478F7E192A024B009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45478F751929FB97009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a */; };
+		45478F81192A04B9009E72B8 /* Application.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F7F192A04B9009E72B8 /* Application.mm */; };
+		45478F84192A0EA9009E72B8 /* Menu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F82192A0EA9009E72B8 /* Menu.mm */; };
 		457B61691909FED60021A442 /* ImageDestination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457B61671909FED60021A442 /* ImageDestination.cpp */; };
 		458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
-		4584443B1903D5E800B468A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458444391903D5E800B468A7 /* InfoPlist.strings */; };
-		4584443D1903D5E800B468A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.m */; };
-		458444411903D5E800B468A7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4584443F1903D5E800B468A7 /* Credits.rtf */; };
+		4584443D1903D5E800B468A7 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.mm */; };
 		458444441903D5E800B468A7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 458444431903D5E800B468A7 /* AppDelegate.mm */; };
-		458444471903D5E800B468A7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458444451903D5E800B468A7 /* MainMenu.xib */; };
-		458444491903D5E800B468A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458444481903D5E800B468A7 /* Images.xcassets */; };
 		458444501903D5E900B468A7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584444F1903D5E900B468A7 /* XCTest.framework */; };
 		458444511903D5E900B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
 		458444591903D5E900B468A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458444571903D5E900B468A7 /* InfoPlist.strings */; };
@@ -52,9 +54,38 @@
 		45B76C1B1909EF68002DF53B /* FileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C191909EF68002DF53B /* FileManager.mm */; };
 		45B76C1E1909F1C9002DF53B /* URL.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B76C1C1909F1C9002DF53B /* URL.mm */; };
 		45E28240190CD2F900BB1BB8 /* Test1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45E2823E190CD2F900BB1BB8 /* Test1.cpp */; };
+		45FC6F75190D94450018BC59 /* Date.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45FC6F73190D94450018BC59 /* Date.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		45478F721929FB97009E72B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45FC6FAC190EB7290018BC59;
+			remoteInfo = "CommonRealtimeGameAlgorithms - iOS";
+		};
+		45478F741929FB97009E72B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45FC7001190EB7AF0018BC59;
+			remoteInfo = "CommonRealtimeGameAlgorithms - OSX";
+		};
+		45478F761929FB97009E72B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 450EF2A6190EBD6E00FC3FE3;
+			remoteInfo = "CommonRealtimeGameAlgorithms - Tester - OSX";
+		};
+		45478F781929FB97009E72B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 455B126D19106740007997D8;
+			remoteInfo = "CommonRealtimeGameAlgorithms - Tester - iOS";
+		};
 		456384341903D7F300383F52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 458443F31903327100B468A7 /* Project object */;
@@ -101,6 +132,17 @@
 		453905361903F14100E2B04F /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		453905391904028500E2B04F /* Color.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Color.mm; sourceTree = "<group>"; };
 		4539053A1904028500E2B04F /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		45478F641929FAA6009E72B8 /* ClassTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassTemplate.cpp; sourceTree = "<group>"; };
+		45478F651929FAA6009E72B8 /* ClassTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTemplate.h; sourceTree = "<group>"; };
+		45478F681929FB8B009E72B8 /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
+		45478F691929FB8B009E72B8 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonRealtimeGameAlgorithms.xcodeproj; path = ../CommonRealtimeGameAlgorithms/CommonRealtimeGameAlgorithms.xcodeproj; sourceTree = "<group>"; };
+		45478F7B1929FFA7009E72B8 /* ErrorCheck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ErrorCheck.mm; sourceTree = "<group>"; };
+		45478F7C1929FFA7009E72B8 /* ErrorCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorCheck.h; sourceTree = "<group>"; };
+		45478F7F192A04B9009E72B8 /* Application.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Application.mm; sourceTree = "<group>"; };
+		45478F80192A04B9009E72B8 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		45478F82192A0EA9009E72B8 /* Menu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Menu.mm; sourceTree = "<group>"; };
+		45478F83192A0EA9009E72B8 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		454FDDC919088AC9008B6530 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
 		454FDDCA19088AC9008B6530 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		454FDDD519088E78008B6530 /* DataProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataProvider.cpp; sourceTree = "<group>"; };
@@ -122,15 +164,10 @@
 		458444331903D5E800B468A7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		458444341903D5E800B468A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		458444351903D5E800B468A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		458444381903D5E800B468A7 /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
-		4584443A1903D5E800B468A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4584443C1903D5E800B468A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4584443C1903D5E800B468A7 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
-		458444401903D5E800B468A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		458444421903D5E800B468A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		458444431903D5E800B468A7 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		458444461903D5E800B468A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		458444481903D5E800B468A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4584444E1903D5E900B468A7 /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4584444F1903D5E900B468A7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		458444561903D5E900B468A7 /* TestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestAppTests-Info.plist"; sourceTree = "<group>"; };
@@ -159,6 +196,8 @@
 		45B76C1D1909F1C9002DF53B /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
 		45E2823E190CD2F900BB1BB8 /* Test1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test1.cpp; sourceTree = "<group>"; };
 		45E2823F190CD2F900BB1BB8 /* Test1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1.h; sourceTree = "<group>"; };
+		45FC6F73190D94450018BC59 /* Date.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Date.mm; sourceTree = "<group>"; };
+		45FC6F74190D94450018BC59 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45478F7E192A024B009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a in Frameworks */,
 				453904D41903DAD700E2B04F /* libEonilCocoa.a in Frameworks */,
 				458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */,
 			);
@@ -194,6 +234,7 @@
 		453904D51903E14100E2B04F /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				45478F671929FB83009E72B8 /* Debugging */,
 				453904FD1903E1E200E2B04F /* Apple */,
 			);
 			path = Platform;
@@ -243,6 +284,10 @@
 				45B76C0219098401002DF53B /* DraggingDestination.h */,
 				453905061903E1E200E2B04F /* Window.mm */,
 				453905051903E1E200E2B04F /* Window.h */,
+				45478F82192A0EA9009E72B8 /* Menu.mm */,
+				45478F83192A0EA9009E72B8 /* Menu.h */,
+				45478F7F192A04B9009E72B8 /* Application.mm */,
+				45478F80192A04B9009E72B8 /* Application.h */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -292,6 +337,8 @@
 				45B76BFF19097D10002DF53B /* String.h */,
 				45B76C1C1909F1C9002DF53B /* URL.mm */,
 				45B76C1D1909F1C9002DF53B /* URL.h */,
+				45FC6F73190D94450018BC59 /* Date.mm */,
+				45FC6F74190D94450018BC59 /* Date.h */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -303,6 +350,7 @@
 				453905101903E1E200E2B04F /* Any.mm */,
 				453905111903E1E200E2B04F /* None.h */,
 				453905121903E1E200E2B04F /* None.mm */,
+				45478F631929FA93009E72B8 /* InternalRawStuffs */,
 			);
 			path = ObjectiveC;
 			sourceTree = "<group>";
@@ -316,12 +364,52 @@
 			path = CoreAnimation;
 			sourceTree = "<group>";
 		};
+		45478F631929FA93009E72B8 /* InternalRawStuffs */ = {
+			isa = PBXGroup;
+			children = (
+				45478F641929FAA6009E72B8 /* ClassTemplate.cpp */,
+				45478F651929FAA6009E72B8 /* ClassTemplate.h */,
+				45478F7B1929FFA7009E72B8 /* ErrorCheck.mm */,
+				45478F7C1929FFA7009E72B8 /* ErrorCheck.h */,
+			);
+			path = InternalRawStuffs;
+			sourceTree = "<group>";
+		};
+		45478F671929FB83009E72B8 /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				45478F681929FB8B009E72B8 /* Exception.cpp */,
+				45478F691929FB8B009E72B8 /* Exception.h */,
+			);
+			path = Debugging;
+			sourceTree = "<group>";
+		};
+		45478F6C1929FB97009E72B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45478F731929FB97009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a */,
+				45478F751929FB97009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a */,
+				45478F771929FB97009E72B8 /* CommonRealtimeGameAlgorithms - Tester - OSX */,
+				45478F791929FB97009E72B8 /* CommonRealtimeGameAlgorithms - Tester - iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45478F7A1929FBAC009E72B8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
 		458443F21903327100B468A7 = {
 			isa = PBXGroup;
 			children = (
 				4584441919033CDC00B468A7 /* README.md */,
 				45B76BE719096D30002DF53B /* LICENSE.md */,
 				4539052B1903EBCC00E2B04F /* DESIGN PRINCIPALS.md */,
+				45478F7A1929FBAC009E72B8 /* Dependencies */,
 				458444021903328900B468A7 /* Sources */,
 				458444361903D5E800B468A7 /* TestApp */,
 				458444541903D5E900B468A7 /* TestAppTests */,
@@ -381,25 +469,12 @@
 			children = (
 				45E2823E190CD2F900BB1BB8 /* Test1.cpp */,
 				45E2823F190CD2F900BB1BB8 /* Test1.h */,
+				4584443C1903D5E800B468A7 /* main.mm */,
+				4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */,
 				458444421903D5E800B468A7 /* AppDelegate.h */,
 				458444431903D5E800B468A7 /* AppDelegate.mm */,
-				458444451903D5E800B468A7 /* MainMenu.xib */,
-				458444481903D5E800B468A7 /* Images.xcassets */,
-				458444371903D5E800B468A7 /* Supporting Files */,
 			);
 			path = TestApp;
-			sourceTree = "<group>";
-		};
-		458444371903D5E800B468A7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				458444381903D5E800B468A7 /* TestApp-Info.plist */,
-				458444391903D5E800B468A7 /* InfoPlist.strings */,
-				4584443C1903D5E800B468A7 /* main.m */,
-				4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */,
-				4584443F1903D5E800B468A7 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		458444541903D5E900B468A7 /* TestAppTests */ = {
@@ -445,7 +520,6 @@
 			buildPhases = (
 				4584442A1903D5E800B468A7 /* Sources */,
 				4584442B1903D5E800B468A7 /* Frameworks */,
-				4584442C1903D5E800B468A7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -500,6 +574,12 @@
 			mainGroup = 458443F21903327100B468A7;
 			productRefGroup = 458443FC1903327100B468A7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 45478F6C1929FB97009E72B8 /* Products */;
+					ProjectRef = 45478F6B1929FB97009E72B8 /* CommonRealtimeGameAlgorithms.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				458443FA1903327100B468A7 /* Cocoa++ */,
@@ -509,18 +589,38 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		4584442C1903D5E800B468A7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4584443B1903D5E800B468A7 /* InfoPlist.strings in Resources */,
-				458444491903D5E800B468A7 /* Images.xcassets in Resources */,
-				458444411903D5E800B468A7 /* Credits.rtf in Resources */,
-				458444471903D5E800B468A7 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXReferenceProxy section */
+		45478F731929FB97009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEonilCommonRealtimeGameAlgorithms.a;
+			remoteRef = 45478F721929FB97009E72B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		45478F751929FB97009E72B8 /* libEonilCommonRealtimeGameAlgorithms.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEonilCommonRealtimeGameAlgorithms.a;
+			remoteRef = 45478F741929FB97009E72B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45478F771929FB97009E72B8 /* CommonRealtimeGameAlgorithms - Tester - OSX */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "CommonRealtimeGameAlgorithms - Tester - OSX";
+			remoteRef = 45478F761929FB97009E72B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45478F791929FB97009E72B8 /* CommonRealtimeGameAlgorithms - Tester - iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "CommonRealtimeGameAlgorithms - Tester - iOS.app";
+			remoteRef = 45478F781929FB97009E72B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
 		4584444C1903D5E800B468A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,18 +651,24 @@
 				45B76BE0190934F2002DF53B /* TableView.mm in Sources */,
 				45B76BE1190934F2002DF53B /* Responder.mm in Sources */,
 				45B76BE2190934F2002DF53B /* Window.mm in Sources */,
+				45478F7D1929FFA7009E72B8 /* ErrorCheck.mm in Sources */,
+				45478F84192A0EA9009E72B8 /* Menu.mm in Sources */,
+				45478F6A1929FB8B009E72B8 /* Exception.cpp in Sources */,
 				457B61691909FED60021A442 /* ImageDestination.cpp in Sources */,
 				45B76C1E1909F1C9002DF53B /* URL.mm in Sources */,
 				45B76C1B1909EF68002DF53B /* FileManager.mm in Sources */,
+				45478F81192A04B9009E72B8 /* Application.mm in Sources */,
 				45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */,
 				45B76BD2190934C4002DF53B /* Type.cpp in Sources */,
 				45B76BD3190934C4002DF53B /* Data.cpp in Sources */,
 				45B76BD4190934C4002DF53B /* Rect.cpp in Sources */,
 				45B76BD5190934C4002DF53B /* Color.cpp in Sources */,
+				45FC6F75190D94450018BC59 /* Date.mm in Sources */,
 				45B76C0A19099914002DF53B /* Array.mm in Sources */,
 				45B76BD6190934C4002DF53B /* ColorSpace.cpp in Sources */,
 				45B76C0D19099DE5002DF53B /* Data.mm in Sources */,
 				45B76BD7190934C4002DF53B /* DataProvider.cpp in Sources */,
+				45478F661929FAA6009E72B8 /* ClassTemplate.cpp in Sources */,
 				45B76BD8190934C4002DF53B /* Image.cpp in Sources */,
 				45B76BCF19093496002DF53B /* String.cpp in Sources */,
 				45B76C0019097D10002DF53B /* String.mm in Sources */,
@@ -576,7 +682,7 @@
 			files = (
 				45E28240190CD2F900BB1BB8 /* Test1.cpp in Sources */,
 				458444441903D5E800B468A7 /* AppDelegate.mm in Sources */,
-				4584443D1903D5E800B468A7 /* main.m in Sources */,
+				4584443D1903D5E800B468A7 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,30 +710,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		458444391903D5E800B468A7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4584443A1903D5E800B468A7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4584443F1903D5E800B468A7 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				458444401903D5E800B468A7 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		458444451903D5E800B468A7 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				458444461903D5E800B468A7 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		458444571903D5E900B468A7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -663,6 +745,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"EONIL_COMMON_REALTIME_GAME_ALGORITHMS_DEBUG_MODE=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -671,6 +754,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)\"/../CommonRealtimeGameAlgorithms",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -698,12 +786,18 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "EONIL_COMMON_REALTIME_GAME_ALGORITHMS_DEBUG_MODE=0";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)\"/../CommonRealtimeGameAlgorithms",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -743,7 +837,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

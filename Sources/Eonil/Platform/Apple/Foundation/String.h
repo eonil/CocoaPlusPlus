@@ -9,7 +9,6 @@
 #pragma once
 #include "../Common.h"
 #include "../Foundation/Object.h"
-
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
 
@@ -32,6 +31,7 @@ public:
 	
 public:
 	String(char const* utf8String);								//!	This copies the string.
+	String(std::string const& utf8String);								//!	This copies the string.
 	
 	auto	equals(String) const -> bool;
 	auto	copy() const -> String;
@@ -44,11 +44,13 @@ public:
 	auto	hasPrefix(String) const -> bool;
 	auto	hasSuffix(String) const -> bool;
 	auto	stringByAppendingString(String) const -> String;
+	auto	stringByAppendingPathComponent(String) const -> String;
 	auto	substringFromIndex(UInteger) const -> String;
 	auto	substringToIndex(UInteger) const -> String;
 	
 public:
 	static auto		stringWithUTF8String(char const*) -> String;
+	static auto		stringWithUTF8String(std::string const&) -> String;
 };
 
 

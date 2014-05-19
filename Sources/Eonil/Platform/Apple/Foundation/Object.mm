@@ -7,7 +7,7 @@
 //
 
 #include "Object.h"
-
+#include "../ObjectiveC/InternalRawStuffs/ErrorCheck.h"
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 
 

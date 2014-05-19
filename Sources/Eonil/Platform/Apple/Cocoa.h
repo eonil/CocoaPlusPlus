@@ -24,7 +24,6 @@
 #include "CoreGraphics/Image.h"
 #include "CoreGraphics/ImageDestination.h"
 
-//#ifdef __OBJC__
 #include "ObjectiveC/Any.h"
 #include "ObjectiveC/None.h"
 #include "CoreAnimation/Layer.h"
@@ -33,6 +32,8 @@
 #include "Foundation/String.h"
 #include "Foundation/Array.h"
 #include "Foundation/URL.h"
+#include "AppKit/Pasteboard.h"
+#include "AppKit/DraggingDestination.h"
 #include "AppKit/FileManager.h"
 #include "AppKit/Color.h"
 #include "AppKit/Image.h"
@@ -43,6 +44,5 @@
 #include "AppKit/TableView.h"
 #include "AppKit/Responder.h"
 #include "AppKit/Window.h"
-#include "AppKit/Pasteboard.h"
-#include "AppKit/DraggingDestination.h"
-//#endif
+#include "AppKit/Menu.h"
+#include "AppKit/Application.h"

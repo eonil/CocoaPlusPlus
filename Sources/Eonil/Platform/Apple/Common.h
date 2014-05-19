@@ -43,7 +43,7 @@
 #import	<Cocoa/Cocoa.h>
 #endif
 
-
+#include "../Debugging/Exception.h"
 
 
 
@@ -157,6 +157,8 @@ class	Data;
 class	AnytypeArray;
 template <typename T>	class	SpecificTypeArray;
 class	URL;
+class	Date;
+using	TimeInterval	=	double;
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_END
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN

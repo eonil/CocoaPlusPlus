@@ -8,14 +8,25 @@
 
 #include "URL.h"
 #include "String.h"
-
+#include "../ObjectiveC/InternalRawStuffs/ErrorCheck.h"
 EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
+
+using namespace	Platform::Debugging;
+
+
 
 
 
 
 URL::operator __unsafe_unretained id() const
 {
+	if (USE_EXCEPTION_CHECKINGS)
+	{
+		InternalRawStuffs::ErrorCheck::crash_if_not_a_kind_of_class<NSData>(*this);
+	}
+	
+	////
+	
 	return	Object::operator __unsafe_unretained id();
 }
 
