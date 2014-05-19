@@ -57,6 +57,7 @@ public:
 class
 MenuItem : public Foundation::Object
 {
+public:
 	using	ACTION	=	std::function<void(void)>;
 	
 public:
@@ -69,7 +70,7 @@ public:
 	
 public:
 	static auto		menuItem() -> MenuItem;
-//	static auto		menuItem(Foundation::String& title, ACTION& action, Foundation::String& keyEquivalent) -> MenuItem;
+	static auto		menuItem(Foundation::String const& title, ACTION const& action, Foundation::String const& keyEquivalent) -> MenuItem;
 };
 
 

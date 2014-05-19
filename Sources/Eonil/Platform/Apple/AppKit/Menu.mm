@@ -140,15 +140,15 @@ MenuItem::menuItem() -> MenuItem
 	[item1 setAction:@selector(____on_action:)];
 	return	item1;
 }
-//auto
-//MenuItem::menuItem(Foundation::String& title, ACTION &action, Foundation::String& keyEquivalent) -> MenuItem
-//{
-//	MENU_ITEM*	item1	=	menuItem();
-//	item1->action		=	action;
-//	[item1 setTitle:title];
-//	[item1 setKeyEquivalent:keyEquivalent];
-//	return	item1;
-//}
+auto
+MenuItem::menuItem(const Foundation::String &title, const ACTION &action, const Foundation::String &keyEquivalent) -> MenuItem
+{
+	MENU_ITEM*	item1	=	menuItem();
+	item1->action		=	action;
+	[item1 setTitle:title];
+	[item1 setKeyEquivalent:keyEquivalent];
+	return	item1;
+}
 
 
 

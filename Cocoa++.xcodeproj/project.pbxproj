@@ -16,7 +16,7 @@
 		45478F84192A0EA9009E72B8 /* Menu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F82192A0EA9009E72B8 /* Menu.mm */; };
 		457B61691909FED60021A442 /* ImageDestination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457B61671909FED60021A442 /* ImageDestination.cpp */; };
 		458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
-		4584443D1903D5E800B468A7 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.mm */; };
+		4584443D1903D5E800B468A7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.cpp */; };
 		458444441903D5E800B468A7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 458444431903D5E800B468A7 /* AppDelegate.mm */; };
 		458444501903D5E900B468A7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584444F1903D5E900B468A7 /* XCTest.framework */; };
 		458444511903D5E900B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
@@ -164,7 +164,7 @@
 		458444331903D5E800B468A7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		458444341903D5E800B468A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		458444351903D5E800B468A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4584443C1903D5E800B468A7 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		4584443C1903D5E800B468A7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
 		458444421903D5E800B468A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		458444431903D5E800B468A7 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 			children = (
 				45E2823E190CD2F900BB1BB8 /* Test1.cpp */,
 				45E2823F190CD2F900BB1BB8 /* Test1.h */,
-				4584443C1903D5E800B468A7 /* main.mm */,
+				4584443C1903D5E800B468A7 /* main.cpp */,
 				4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */,
 				458444421903D5E800B468A7 /* AppDelegate.h */,
 				458444431903D5E800B468A7 /* AppDelegate.mm */,
@@ -682,7 +682,7 @@
 			files = (
 				45E28240190CD2F900BB1BB8 /* Test1.cpp in Sources */,
 				458444441903D5E800B468A7 /* AppDelegate.mm in Sources */,
-				4584443D1903D5E800B468A7 /* main.mm in Sources */,
+				4584443D1903D5E800B468A7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
