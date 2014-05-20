@@ -38,8 +38,11 @@ EONIL_PLATFORM_APPLE_FOUNDATION_NAMESPACE_BEGIN
 class
 Object : public Any
 {
+	using	super	=	Any;
+	
 public:
-	using	Any::Any;
+	using	super::super;
+	
 //	Object(id);
 	
 public:

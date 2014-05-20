@@ -53,7 +53,15 @@ Eonil
 			
 			
 			
-			
+
+					
+			Error::~Error()
+			{
+			}
+					
+			Crash::~Crash()
+			{	
+			}
 			
 			
 			

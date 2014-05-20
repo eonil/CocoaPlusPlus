@@ -1,0 +1,11 @@
+//
+//  Common.xcconfig
+//  Cocoa++
+//
+//  Created by Hoon H. on 14/5/20.
+//  Copyright (c) 2014 Eonil. All rights reserved.
+//
+
+OTHER_CFLAGS			=	-Winline -Weverything -Wno-c++98-compat -Wno-direct-ivar-access -Wno-mismatched-tags -Wno-c++98-compat-pedantic -Wno-objc-missing-property-synthesis -Wno-padded
+OTHER_CPLUSPLUSFLAGS	=	$OTHER_CFLAGS
+WARNING_CFLAGS			=	$OTHER_CFLAGS

@@ -28,7 +28,7 @@ Point::operator CGPoint() const
 	return	_cgpoint;
 }
 auto
-Point::x() const -> Float const
+Point::x() const -> Float
 {
 	return	_cgpoint.x;
 }
@@ -38,7 +38,7 @@ Point::setX(Float o) -> void
 	_cgpoint.x	=	o;
 }
 auto
-Point::y() const -> Float const
+Point::y() const -> Float
 {
 	return	_cgpoint.y;
 }
@@ -65,7 +65,7 @@ Size::operator CGSize() const
 	return	_cgsize;
 }
 auto
-Size::width() const -> Float const
+Size::width() const -> Float
 {
 	return	_cgsize.width;
 }
@@ -75,7 +75,7 @@ Size::setWidth(Float o) -> void
 	_cgsize.width	=	o;
 }
 auto
-Size::height() const -> Float const
+Size::height() const -> Float
 {
 	return	_cgsize.height;
 }

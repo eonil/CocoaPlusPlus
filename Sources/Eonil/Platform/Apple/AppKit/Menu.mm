@@ -68,13 +68,13 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END
 
 
 @interface	____Eonil_Cocoa_MenuItem_2 : NSMenuItem
+- (void)____on_action:(id)sender;
+@end
+@implementation ____Eonil_Cocoa_MenuItem_2
 {
 @public
 	std::function<void(void)>	action;
 }
-- (void)____on_action:(id)sender;
-@end
-@implementation ____Eonil_Cocoa_MenuItem_2
 - (void)____on_action:(id)sender
 {
 	using namespace	Eonil::Platform::Debugging;

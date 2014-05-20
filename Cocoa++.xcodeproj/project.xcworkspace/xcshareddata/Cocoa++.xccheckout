@@ -5,24 +5,24 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>087C2E81-3AF4-433E-90AE-9ADA33983C7E</string>
+	<string>24343958-E0F9-45A5-B7C5-9A93DF32B021</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Cocoa++</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>0CBBAEF7-B6A5-4C23-BE9A-B9A296C79ADC</key>
+		<string>https://github.com/Eonil/CommonRealtimeGameAlgorithms.git</string>
 		<key>40DBD4D2-3B8B-4F01-9959-437A799122B3</key>
 		<string>https://github.com/Eonil/CocoaPlusPlus.git</string>
-		<key>59E1252B-6A7E-4F8E-A207-E51FF1B61868</key>
-		<string>https://github.com/Eonil/CommonRealtimeGameAlgorithms.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Cocoa++.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>0CBBAEF7-B6A5-4C23-BE9A-B9A296C79ADC</key>
+		<string>../../../CommonRealtimeGameAlgorithms</string>
 		<key>40DBD4D2-3B8B-4F01-9959-437A799122B3</key>
 		<string>../..</string>
-		<key>59E1252B-6A7E-4F8E-A207-E51FF1B61868</key>
-		<string>../../../CommonRealtimeGameAlgorithms</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Eonil/CocoaPlusPlus.git</string>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>59E1252B-6A7E-4F8E-A207-E51FF1B61868</string>
+			<string>0CBBAEF7-B6A5-4C23-BE9A-B9A296C79ADC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CommonRealtimeGameAlgorithms</string>
 		</dict>

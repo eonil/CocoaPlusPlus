@@ -13,16 +13,16 @@ using namespace	Eonil::CocoaCPP::Foundation;
 using namespace	Eonil::CocoaCPP::AppKit;
 
 @interface	____Eonil_Cocoa_AppDelegate : NSObject <NSApplicationDelegate>
+@end
+@implementation	____Eonil_Cocoa_AppDelegate
 {
-	@public
+@public
 	struct
 	{
 		Application::Delegate*		cpp_delegate	{nullptr};
 	}
 	slots;
 }
-@end
-@implementation	____Eonil_Cocoa_AppDelegate
 - (void)applicationWillFinishLaunching:(NSNotification *)notification
 {
 	slots.cpp_delegate->applicationWillFinishLaunching();
@@ -48,6 +48,9 @@ Application::Delegate::Delegate() : Any([[____Eonil_Cocoa_AppDelegate alloc] ini
 {
 	auto	self	=	get_objc_object<____Eonil_Cocoa_AppDelegate>();
 	self->slots.cpp_delegate	=	this;
+}
+Application::Delegate::~Delegate()
+{
 }
 
 

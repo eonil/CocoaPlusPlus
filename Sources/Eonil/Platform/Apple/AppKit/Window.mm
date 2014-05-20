@@ -17,6 +17,8 @@ using namespace	Eonil::CocoaCPP::Foundation;
 using namespace	Eonil::CocoaCPP::AppKit;
 
 @interface	____Eonil_Cocoa_WindowDelegate : NSObject <NSWindowDelegate>
+@end
+@implementation	____Eonil_Cocoa_WindowDelegate
 {
 @public
 	struct
@@ -25,8 +27,6 @@ using namespace	Eonil::CocoaCPP::AppKit;
 	}
 	slots;
 }
-@end
-@implementation	____Eonil_Cocoa_WindowDelegate
 - (BOOL)windowShouldClose:(id)sender
 {
 	return	toOBJC(slots.cpp_delegate->windowShouldClose(sender));
@@ -89,6 +89,9 @@ Window::Delegate::Delegate() : Any([[____Eonil_Cocoa_WindowDelegate alloc] init]
 {
 	auto	self	=	get_objc_object<____Eonil_Cocoa_WindowDelegate>();
 	self->slots.cpp_delegate	=	this;
+}
+Window::Delegate::~Delegate()
+{
 }
 
 
@@ -265,6 +268,41 @@ Window::unregisterDraggedTypes() -> void
 	auto	self	=	get_objc_object<NSWindow>();
 	[self unregisterDraggedTypes];
 }
+
+
+
+
+
+
+
+
+
+auto
+Window::
+performClose() -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self performClose:nil];
+}
+auto
+Window::
+performMiniaturize() -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self performMiniaturize:nil];
+}
+auto
+Window::
+performZoom() -> void
+{
+	auto	self	=	get_objc_object<NSWindow>();
+	[self performZoom:nil];
+}
+
+
+
+
+
 
 
 

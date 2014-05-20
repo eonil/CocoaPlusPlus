@@ -31,7 +31,7 @@ public:
 	
 public:
 	String(char const* utf8String);								//!	This copies the string.
-	String(std::string const& utf8String);								//!	This copies the string.
+	String(std::string const& utf8String);						//!	This copies the string.
 	
 	auto	equals(String) const -> bool;
 	auto	copy() const -> String;

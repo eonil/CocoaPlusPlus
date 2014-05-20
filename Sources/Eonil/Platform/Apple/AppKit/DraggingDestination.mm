@@ -36,7 +36,9 @@ DraggingInfo::draggingSource() const -> Any
 
 
 
-
+DraggingDestination::~DraggingDestination()
+{
+}
 
 
 

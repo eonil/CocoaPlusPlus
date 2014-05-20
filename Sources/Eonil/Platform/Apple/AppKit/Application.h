@@ -7,7 +7,7 @@
 //
 
 #pragma once
-#include "../Common.h"
+#include "Common.h"
 #include "Responder.h"
 #include "DraggingDestination.h"
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
@@ -31,9 +31,10 @@ public:
 		Delegate();
 		Delegate(Delegate const&) = delete;
 		Delegate(Delegate&&) = delete;
+		virtual ~Delegate();
 		
-		virtual inline auto		applicationWillFinishLaunching() -> void		{};
-		virtual inline auto		applicationDidFinishLaunching() -> void			{};
+		virtual inline auto		applicationWillFinishLaunching() -> void		{}
+		virtual inline auto		applicationDidFinishLaunching() -> void			{}
 	};
 	
 public:

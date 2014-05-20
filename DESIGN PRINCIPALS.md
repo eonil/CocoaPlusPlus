@@ -26,6 +26,10 @@ DESIGN PRINCIPALS
 
 
 
+
+
+
+
 -	All wrapper classes are just thin wrappers around Objective-C object pointers.
 	Conceptually, a class is something like this;
 	
@@ -94,6 +98,7 @@ DESIGN PRINCIPALS
 
 
 
+
 -	No toll-free bridging by default.
 	Cocoa supports toll-free bridging between some CF types and some Cocoa classes.
 	It seems possible to support toll-free bridging, but there're bunch of stuffs to care about to support
@@ -101,10 +106,38 @@ DESIGN PRINCIPALS
 
 
 
--	No parameter-less constructor.
-	Parameter-less constructor may cause hard-to-find bugs. Do not use them on wrapper classes.
-	Always use factory method.
-	Anyway, this can be revoked later if it seems to be harmless.
+-	Direct constructors are allowed only on final classes.
+	Constructor may cause hard-to-find bugs. Do not use them on intermediate classes.
+	On intermediate classes, always use factory method.
+	The best way is not instantiating intermediate classes.
+
+
+
+-	No bi-directional roundtripping.
+	If you created a Cocoa object using this library, the object is fully roundtrippable between C++ and Objective-C.
+	Otherwise, some object will not be converted into corresponding C++ class.
+	Because some classes are created in subclassed form for event handling and etc.. 
+	If you're not sure, just remember these rules.
+	
+	-	Cast an Objective-C object into C++ class only if the object was created by C++ class.
+	-	Do not cast Objective-C object into C++ class if it was not created by C++ class.
+
+
+
+
+-	No reflection.
+	Though it is possible to expose Objective-C reflection facility into C++, but there's no C++ counterpart.
+	I just decided not to expose reflection stuff.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,13 +179,61 @@ Keep it simple by decomposing each features
 	
 	
 	
+
+
+
+
 	
+Observer Pattern Policy
+-----------------------
+Cocoa is relying heavily on MVC/observer pattern. It's crucial to support observer pattern easily
+and correctly.
+
+In large, Cocoa uses a few different approaches on observing message.
+
+-	Target-action.
+-	Explicit messaging. (sending message selector to an object)
+-	Delegate.
+-	Subclassing and overriding. (including responder)
+-	Notification.
+
+All these are relying on Objective-C dynamic messaging feature.
+
+-	Target-action.
+	Subclass the Objective-C object, add C++ lambda variable.
+	Catch event by target itself, and call the lambda.
 	
+-	Explicit messaging.
+	**NO SUPPORT** I think there's some possible trick, but too dirty.
+
+-	Delegate.
+	Make an pure virtual class (interface) which declares all delegate methods.
+	Subclass `Any` class and inherits all needed interfaces.
+	Delegate is set by pointer to represent no-ownership.
 	
+-	Subclassing and overriding.
+	Make a separated class for overriden class. Install hools on all possible methods.
+	Take lambda table which are mapped to each methods. (see `OverridableView` class).
+
+-	Responder.
+	Resolve just like subclassing case.
 	
-	
-	
-	
-	
-	
-	
+-	Notification.
+	Use lambda.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

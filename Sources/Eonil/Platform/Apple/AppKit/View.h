@@ -7,8 +7,8 @@
 //
 
 #pragma once
-#include "../Common.h"
-#include "../Foundation/Object.h"
+#include "Common.h"
+#include "Responder.h"
 #include "DraggingDestination.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
@@ -19,13 +19,13 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
 class
-View : public Foundation::Object
+View : public Responder
 {
 public:
 	static auto	view() -> View;
 	
 public:
-	using	Object::Object;
+	using	Responder::Responder;
 	
 public:
 	auto	frame() const -> Rect;
@@ -59,13 +59,15 @@ OverridableView : public View
 {
 public:
 	struct
-	Behaviors : DraggingDestination
+	Hooks : DraggingDestination
 	{
+		virtual ~Hooks();
+		
 		virtual auto	didMoveToSuperview() -> void	{}
 	};
 	
 public:
-	OverridableView(uptr<Behaviors>&& overridings);
+	OverridableView(uptr<Hooks>&& overridings);
 };
 
 

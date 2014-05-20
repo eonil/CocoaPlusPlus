@@ -18,7 +18,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
 class
-Color : public Foundation::Object
+Color final : public Foundation::Object
 {
 public:
 	struct

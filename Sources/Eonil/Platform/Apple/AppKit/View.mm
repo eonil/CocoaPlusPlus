@@ -167,72 +167,75 @@ using namespace	Eonil::CocoaCPP;
 using namespace	Eonil::CocoaCPP::AppKit;
 
 @interface	____CPP_Eonil_Cocoa_OverridableView1 : NSView
-{
-@public
-	uptr<OverridableView::Behaviors>	overridings;
-}
 @end
 @implementation ____CPP_Eonil_Cocoa_OverridableView1
+{
+@public
+	uptr<OverridableView::Hooks>	hooks;
+}
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	return	NSDragOperation(overridings->draggingEntered(DraggingInfo{sender}));
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	return	NSDragOperation(hooks->draggingEntered(DraggingInfo{sender}));
 }
 - (NSDragOperation)draggingUpdated:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	return	NSDragOperation(overridings->draggingUpdated(sender));
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	return	NSDragOperation(hooks->draggingUpdated(sender));
 }
 - (void)draggingEnded:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	overridings->draggingEnded(sender);
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	hooks->draggingEnded(sender);
 }
 - (void)draggingExited:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	overridings->draggingExited(sender);
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	hooks->draggingExited(sender);
 }
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	return	toOBJC(overridings->prepareForDragOperation(sender));
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	return	toOBJC(hooks->prepareForDragOperation(sender));
 }
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	return	toOBJC(overridings->performDragOperation(sender));
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	return	toOBJC(hooks->performDragOperation(sender));
 }
 - (void)concludeDragOperation:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	overridings->concludeDragOperation(sender);
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	hooks->concludeDragOperation(sender);
 }
 - (void)updateDraggingItemsForDrag:(id<NSDraggingInfo>)sender
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
-	overridings->updateDraggingItemsForDrag(sender);
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
+	hooks->updateDraggingItemsForDrag(sender);
 }
 - (void)viewDidMoveToSuperview
 {
-	EONIL_COCOA_DEBUG_ASSERT(overridings != nullptr);
+	EONIL_COCOA_DEBUG_ASSERT(hooks != nullptr);
 	[super viewDidMoveToSuperview];
-	if (self->overridings != nullptr)
+	if (self->hooks != nullptr)
 	{
-		self->overridings->didMoveToSuperview();
+		self->hooks->didMoveToSuperview();
 	}
 }
 @end
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
-OverridableView::OverridableView(uptr<OverridableView::Behaviors>&&o) : View([[____CPP_Eonil_Cocoa_OverridableView1 alloc] init])
+OverridableView::Hooks::~Hooks()
+{
+}
+
+OverridableView::OverridableView(uptr<OverridableView::Hooks>&&o) : View([[____CPP_Eonil_Cocoa_OverridableView1 alloc] init])
 {
 	__unsafe_unretained ____CPP_Eonil_Cocoa_OverridableView1*	v1	=	operator __unsafe_unretained id();
 	EONIL_COCOA_ASSERT_OBJC_TYPE(v1, ____CPP_Eonil_Cocoa_OverridableView1);
-	v1->overridings	=	std::move(o);
+	v1->hooks	=	std::move(o);
 }
-
 
 
 

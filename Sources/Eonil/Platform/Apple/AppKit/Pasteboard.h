@@ -7,7 +7,7 @@
 //
 
 #pragma once
-#include "../Common.h"
+#include "Common.h"
 #include "../Foundation/Object.h"
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
@@ -27,9 +27,9 @@ public:
 	operator __unsafe_unretained id() const;
 	
 public:
-	auto	types() const -> Foundation::SpecificTypeArray<Foundation::String>;			//!	Returns UTI strings.
-	auto	dataForType(Foundation::String const& type) const -> Foundation::Data;
-	auto	stringForType(Foundation::String const& type) const -> Foundation::String;
+	auto	types() const -> Foundation::SpecificTypeArray<String>;			//!	Returns UTI strings.
+	auto	dataForType(String const& type) const -> Foundation::Data;
+	auto	stringForType(String const& type) const -> String;
 };
 
 
@@ -48,20 +48,20 @@ public:
 	struct
 	Type
 	{
-		static auto	string() -> Foundation::String;
-		static auto	PDF() -> Foundation::String;
-		static auto	TIFF() -> Foundation::String;
-		static auto	PNG() -> Foundation::String;
-		static auto	RTF() -> Foundation::String;
-		static auto	RTFD() -> Foundation::String;
-		static auto	HTML() -> Foundation::String;
-		static auto	tabularText() -> Foundation::String;
-		static auto	font() -> Foundation::String;
-		static auto	ruler() -> Foundation::String;
-		static auto	color() -> Foundation::String;
-		static auto	sound() -> Foundation::String;
-		static auto	multipleTextSelection() -> Foundation::String;
-		static auto	findPanelSearchOptions() -> Foundation::String;
+		static auto	string() -> String;
+		static auto	PDF() -> String;
+		static auto	TIFF() -> String;
+		static auto	PNG() -> String;
+		static auto	RTF() -> String;
+		static auto	RTFD() -> String;
+		static auto	HTML() -> String;
+		static auto	tabularText() -> String;
+		static auto	font() -> String;
+		static auto	ruler() -> String;
+		static auto	color() -> String;
+		static auto	sound() -> String;
+		static auto	multipleTextSelection() -> String;
+		static auto	findPanelSearchOptions() -> String;
 	};
 	
 public:

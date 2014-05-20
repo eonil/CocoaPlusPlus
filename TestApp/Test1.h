@@ -6,9 +6,7 @@
 //  Copyright (c) 2014 Eonil. All rights reserved.
 //
 
-#ifndef __Cocoa____Test1__
-#define __Cocoa____Test1__
-
+#pragma once
 #include <memory>
 
 class
@@ -22,4 +20,4 @@ public:
 	~Test1();
 };
 
-#endif /* defined(__Cocoa____Test1__) */
+

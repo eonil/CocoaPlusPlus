@@ -10,7 +10,6 @@
 #include "../Common.h"
 #include "../Foundation/Object.h"
 #include "../Foundation/Date.h"
-
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 

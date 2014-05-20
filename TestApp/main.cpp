@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Eonil. All rights reserved.
 //
 
-#include "../Sources/Eonil/Platform/Apple/Cocoa.h"
+
 #include "Test1.h"
+#include "../Sources/Eonil/Platform/Apple/Cocoa.h"
 
 
 using namespace Eonil::CocoaCPP::Foundation;
@@ -29,6 +30,8 @@ AppDelegate1 : Application::Delegate
 	{
 	}
 	
+	virtual ~AppDelegate1();
+	
 	virtual inline auto
 	applicationWillFinishLaunching() -> void
 	{
@@ -49,6 +52,11 @@ AppDelegate1 : Application::Delegate
 		test1	=	std::unique_ptr<Test1>(new Test1());
 	}
 };
+
+
+AppDelegate1::~AppDelegate1()
+{
+}
 
 
 

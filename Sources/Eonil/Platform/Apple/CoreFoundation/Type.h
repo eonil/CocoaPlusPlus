@@ -20,6 +20,9 @@ EONIL_PLATFORM_APPLE_CORE_FOUNDATION_NAMESPACE_BEGIN
 
 /*!
  Provides `CFType` features.
+ 
+ @discussion
+ Represents CoreFoundation object type.
  */
 class
 Type
@@ -28,7 +31,7 @@ public:
 	Type() = delete;
 	Type(Type const&);
 	Type(Type&&);
-	virtual ~Type();
+	~Type();
 	
 	Type(std::nullptr_t);
 	Type(CFTypeRef);

@@ -9,8 +9,12 @@
 #pragma once
 #include "../Common.h"
 #include "Control.h"
-
+#include "Cell.h"
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
+
+
+
+
 
 
 
@@ -27,6 +31,9 @@ public:
 public:
 	auto	width() const -> Float;
 	auto	setWidth(Float) -> void;
+	
+	auto	headerCell() const -> Cell;
+	auto	setHeaderCell(Cell const&) -> void;
 };
 
 
@@ -48,6 +55,7 @@ public:
 	struct
 	Delegate : Any
 	{
+		virtual ~Delegate();	
 		virtual auto	heightOfRow(TableView, Integer row) -> Float		{ return 0; }
 	};
 	

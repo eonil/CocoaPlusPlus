@@ -23,6 +23,9 @@ Eonil
 			{
 			public:
 				using	Eonil::CommonRealtimeGameAlgorithms::Error::Error;
+				
+				Error(Error const&) = default;
+				~Error();
 			};
 			
 			class
@@ -30,6 +33,9 @@ Eonil
 			{
 			public:
 				using	Eonil::CommonRealtimeGameAlgorithms::Crash::Crash;
+				
+				Crash(Crash const&) = default;
+				~Crash();
 			};
 			
 			
@@ -44,3 +50,4 @@ Eonil
 		}
 	}
 }
+

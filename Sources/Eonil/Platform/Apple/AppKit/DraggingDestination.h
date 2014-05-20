@@ -56,16 +56,18 @@ public:
 struct
 DraggingDestination
 {
-	virtual auto	draggingEntered(DraggingInfo info) -> DRAG_OPERATION	{	return	DRAG_OPERATION::NONE;	};
-	virtual auto	draggingUpdated(DraggingInfo info) -> DRAG_OPERATION	{	return	DRAG_OPERATION::NONE;	};
-	virtual auto	draggingEnded(DraggingInfo info) -> void				{};
-	virtual auto	draggingExited(DraggingInfo info) -> void				{};
+	virtual ~DraggingDestination();
 	
-	virtual auto	prepareForDragOperation(DraggingInfo info) -> bool		{	return	false;	};
-	virtual auto	performDragOperation(DraggingInfo info) -> bool			{	return	false;	};
-	virtual auto	concludeDragOperation(DraggingInfo info) -> void		{};
+	virtual auto	draggingEntered(DraggingInfo info) -> DRAG_OPERATION	{	return	DRAG_OPERATION::NONE;	}
+	virtual auto	draggingUpdated(DraggingInfo info) -> DRAG_OPERATION	{	return	DRAG_OPERATION::NONE;	}
+	virtual auto	draggingEnded(DraggingInfo info) -> void				{}
+	virtual auto	draggingExited(DraggingInfo info) -> void				{}
 	
-	virtual auto	updateDraggingItemsForDrag(DraggingInfo info) -> void	{};
+	virtual auto	prepareForDragOperation(DraggingInfo info) -> bool		{	return	false;	}
+	virtual auto	performDragOperation(DraggingInfo info) -> bool			{	return	false;	}
+	virtual auto	concludeDragOperation(DraggingInfo info) -> void		{}
+	
+	virtual auto	updateDraggingItemsForDrag(DraggingInfo info) -> void	{}
 };
 
 

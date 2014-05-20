@@ -34,7 +34,6 @@ public:
 	
 public:
 	
-	
 	enum class
 	DIVIDER_ORIENTATION : bool
 	{
@@ -53,7 +52,7 @@ public:
 	struct
 	Delegate : Any
 	{
-		virtual auto	splitViewResizeSubviewsWithOldSize(SplitView, Size const& oldsize) -> void		{};
+		virtual auto	splitViewResizeSubviewsWithOldSize(SplitView, Size const& oldsize) -> void		{}
 	};
 	
 	auto	delegate() const -> Delegate*;
@@ -85,3 +84,4 @@ public:
 
 
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END
+

@@ -7,10 +7,9 @@
 //
 
 #pragma once
-#include "../Common.h"
+#include "Common.h"
 #include "Responder.h"
 #include "DraggingDestination.h"
-
 EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
@@ -21,8 +20,13 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
  Take care that you have to order to show the window.
  */
 class
-Window : Responder
+Window : public Responder
 {
+	using	super	=	Responder;
+	
+public:
+	using	super::super;
+	
 public:
 	enum class
 	STYLE : UInteger
@@ -41,13 +45,12 @@ public:
 		Delegate();
 		Delegate(Delegate const&) = delete;
 		Delegate(Delegate&&) = delete;
+		virtual ~Delegate();
 		
 		virtual inline auto		windowShouldClose(Window) -> bool		{ return NO; }
 	};
 
 public:
-	using	Responder::Responder;
-	
 	static auto	window() -> Window;
 	
 public:
@@ -81,6 +84,10 @@ public:
 	 */
 	auto	registerForDraggedTypes(vec<Foundation::String> const& UTIs) -> void;
 	auto	unregisterDraggedTypes() -> void;
+	
+	auto	performClose() -> void;				//!	Simulates user clicking of close button.
+	auto	performMiniaturize() -> void;		//!	Simulates user clicking of miniaturize button.
+	auto	performZoom() -> void;				//!	Simulates user clicking of zoom button.
 	
 public:
 	auto	asResponder() const -> Responder const&;

@@ -23,6 +23,9 @@ using namespace	Eonil::CocoaCPP;
 using namespace	Eonil::CocoaCPP::AppKit;
 
 @interface	____Eonil_Cocoa_TableView_Delegate : NSObject <NSTableViewDelegate>
+@end
+
+@implementation ____Eonil_Cocoa_TableView_Delegate
 {
 @public
 	struct
@@ -31,9 +34,6 @@ using namespace	Eonil::CocoaCPP::AppKit;
 	}
 	slots;
 }
-@end
-
-@implementation ____Eonil_Cocoa_TableView_Delegate
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
 	return	slots.cpp_delegate->heightOfRow(tableView, row);
@@ -76,6 +76,20 @@ TableColumn::setWidth(Float o) -> void
 	[self setWidth:o];
 }
 
+auto
+TableColumn::
+headerCell() const -> Cell
+{
+	auto	self	=	get_objc_object<NSTableColumn>();
+	return	[self headerCell];
+}
+auto
+TableColumn::
+setHeaderCell(Cell const& o) -> void
+{
+	auto	self	=	get_objc_object<NSTableColumn>();
+	[self setHeaderCell:o];
+}
 
 
 
@@ -88,6 +102,23 @@ TableColumn::setWidth(Float o) -> void
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TableView::Delegate::~Delegate()
+{
+}
 
 
 

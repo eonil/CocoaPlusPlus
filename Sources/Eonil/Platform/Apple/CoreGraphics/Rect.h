@@ -30,10 +30,10 @@ public:
 	
 	operator	CGPoint() const;
 	
-	auto		x() const -> Float const;
+	auto		x() const -> Float;
 	auto		setX(Float) -> void;
 	
-	auto		y() const -> Float const;
+	auto		y() const -> Float;
 	auto		setY(Float) -> void;
 	
 };
@@ -49,10 +49,10 @@ public:
 	
 	operator	CGSize() const;
 	
-	auto		width() const -> Float const;
+	auto		width() const -> Float;
 	auto		setWidth(Float) -> void;
 	
-	auto		height() const -> Float const;
+	auto		height() const -> Float;
 	auto		setHeight(Float) -> void;
 };
 
