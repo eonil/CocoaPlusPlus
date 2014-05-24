@@ -19,6 +19,7 @@ Primary goal is providing these;
 -	More robust and structured program by using C++. (less dynamics, better abstraction)
 -	In most cases, no actual extra performance/memory loss. (essentially just a wrapped pointer)
 	But extra cost for event handling structure.
+-	Keep original API names and styles as much as possible.
 
 It's far easier to design and maintain a correct program in C++.
 

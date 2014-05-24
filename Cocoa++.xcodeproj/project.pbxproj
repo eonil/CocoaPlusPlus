@@ -24,13 +24,11 @@
 		45478F9B192A4277009E72B8 /* Scroller.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F99192A4277009E72B8 /* Scroller.mm */; };
 		45478F9E192A429A009E72B8 /* Text.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F9C192A429A009E72B8 /* Text.mm */; };
 		45478FA1192A429F009E72B8 /* Font.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478F9F192A429F009E72B8 /* Font.mm */; };
-		45478FA8192A4AC5009E72B8 /* TestWindowController1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45478FA6192A4AC5009E72B8 /* TestWindowController1.cpp */; };
 		45478FAB192A4ADB009E72B8 /* WindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45478FA9192A4ADB009E72B8 /* WindowController.mm */; };
 		45478FAE192A50EA009E72B8 /* Document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45478FAC192A50EA009E72B8 /* Document.cpp */; };
 		457B61691909FED60021A442 /* ImageDestination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457B61671909FED60021A442 /* ImageDestination.cpp */; };
 		458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
 		4584443D1903D5E800B468A7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.cpp */; };
-		458444441903D5E800B468A7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 458444431903D5E800B468A7 /* AppDelegate.mm */; };
 		459DC83D19089F5C00FF6BD2 /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905081903E1E200E2B04F /* Common.mm */; };
 		45B76BCF19093496002DF53B /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDF41908962E008B6530 /* String.cpp */; };
 		45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDDD190890E7008B6530 /* Cocoa.cpp */; };
@@ -165,8 +163,6 @@
 		45478F9D192A429A009E72B8 /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
 		45478F9F192A429F009E72B8 /* Font.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Font.mm; sourceTree = "<group>"; };
 		45478FA0192A429F009E72B8 /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
-		45478FA6192A4AC5009E72B8 /* TestWindowController1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestWindowController1.cpp; sourceTree = "<group>"; };
-		45478FA7192A4AC5009E72B8 /* TestWindowController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWindowController1.h; sourceTree = "<group>"; };
 		45478FA9192A4ADB009E72B8 /* WindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WindowController.mm; sourceTree = "<group>"; };
 		45478FAA192A4ADB009E72B8 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		45478FAC192A50EA009E72B8 /* Document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Document.cpp; sourceTree = "<group>"; };
@@ -194,12 +190,7 @@
 		458444351903D5E800B468A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4584443C1903D5E800B468A7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
-		458444421903D5E800B468A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		458444431903D5E800B468A7 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		4584444F1903D5E900B468A7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		458444561903D5E900B468A7 /* TestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestAppTests-Info.plist"; sourceTree = "<group>"; };
-		458444581903D5E900B468A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4584445A1903D5E900B468A7 /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
 		45B76BE719096D30002DF53B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		45B76BFB19097C86002DF53B /* Pasteboard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pasteboard.mm; sourceTree = "<group>"; };
 		45B76BFC19097C86002DF53B /* Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pasteboard.h; sourceTree = "<group>"; };
@@ -486,7 +477,6 @@
 				4504CF47192B69FE00F3FC8B /* Metadata */,
 				458444021903328900B468A7 /* Sources */,
 				458444361903D5E800B468A7 /* TestApp */,
-				458444541903D5E900B468A7 /* TestAppTests */,
 				4584442F1903D5E800B468A7 /* Frameworks */,
 				458443FC1903327100B468A7 /* Products */,
 			);
@@ -542,33 +532,11 @@
 			isa = PBXGroup;
 			children = (
 				4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */,
-				45478FA6192A4AC5009E72B8 /* TestWindowController1.cpp */,
-				45478FA7192A4AC5009E72B8 /* TestWindowController1.h */,
 				45E2823E190CD2F900BB1BB8 /* Test1.cpp */,
 				45E2823F190CD2F900BB1BB8 /* Test1.h */,
 				4584443C1903D5E800B468A7 /* main.cpp */,
-				458444421903D5E800B468A7 /* AppDelegate.h */,
-				458444431903D5E800B468A7 /* AppDelegate.mm */,
 			);
 			path = TestApp;
-			sourceTree = "<group>";
-		};
-		458444541903D5E900B468A7 /* TestAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				4584445A1903D5E900B468A7 /* TestAppTests.m */,
-				458444551903D5E900B468A7 /* Supporting Files */,
-			);
-			path = TestAppTests;
-			sourceTree = "<group>";
-		};
-		458444551903D5E900B468A7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				458444561903D5E900B468A7 /* TestAppTests-Info.plist */,
-				458444571903D5E900B468A7 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -733,9 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E28240190CD2F900BB1BB8 /* Test1.cpp in Sources */,
-				458444441903D5E800B468A7 /* AppDelegate.mm in Sources */,
 				4584443D1903D5E800B468A7 /* main.cpp in Sources */,
-				45478FA8192A4AC5009E72B8 /* TestWindowController1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,17 +714,6 @@
 			targetProxy = 456384341903D7F300383F52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		458444571903D5E900B468A7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				458444581903D5E900B468A7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		458443FD1903327100B468A7 /* Debug */ = {
