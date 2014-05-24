@@ -43,15 +43,15 @@ public:
 	};
 	
 public:
-	WindowController(Hooks const&);
+	WindowController(Hooks);
 	
 public:
 	auto	document() -> Document;
-	auto	setDocument(Document const&) -> void;
+	auto	setDocument(Document) -> void;
 	auto	unsetDocument() -> void;
 	
 	auto	window() -> Window;
-	auto	setWindow(Window const&) -> void;
+	auto	setWindow(Window) -> void;
 	auto	unsetWindow() -> void;
 };
 

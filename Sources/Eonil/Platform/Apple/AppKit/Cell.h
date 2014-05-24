@@ -24,6 +24,7 @@ protected:
 	
 public:
 	auto	stringValue() const -> String;
+	auto	setStringValue(String) -> void;
 	auto	setStringValue(String const&) -> void;
 };
 

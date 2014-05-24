@@ -39,11 +39,11 @@ public:
 	using	super::super;
 	
 public:
-	auto	setDocumentView(View const&) -> void;
+	auto	setDocumentView(View) -> void;
 	
 public:
 	static auto		scrollView() -> ScrollView;
-	static auto		scrollViewWithParameters(Parameters const&) -> ScrollView;
+	static auto		scrollViewWithParameters(Parameters) -> ScrollView;
 };
 
 

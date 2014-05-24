@@ -33,7 +33,7 @@ public:
 	auto	setWidth(Float) -> void;
 	
 	auto	headerCell() const -> Cell;
-	auto	setHeaderCell(Cell const&) -> void;
+	auto	setHeaderCell(Cell) -> void;
 };
 
 

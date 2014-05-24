@@ -88,7 +88,7 @@ Application::unsetDelegate() -> void
 
 
 auto
-Application::setMainMenu(Eonil::CocoaCPP::AppKit::Menu& o) -> void
+Application::setMainMenu(Eonil::CocoaCPP::AppKit::Menu o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSMenu);
 	

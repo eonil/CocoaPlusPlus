@@ -15,7 +15,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 auto
 ScrollView::
-setDocumentView(const Eonil::CocoaCPP::AppKit::View &o) -> void
+setDocumentView(Eonil::CocoaCPP::AppKit::View o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSView);
 	
@@ -34,7 +34,7 @@ scrollView() -> ScrollView
 }
 auto
 ScrollView::
-scrollViewWithParameters(const Eonil::CocoaCPP::AppKit::ScrollView::Parameters &p1) -> ScrollView
+scrollViewWithParameters(Eonil::CocoaCPP::AppKit::ScrollView::Parameters p1) -> ScrollView
 {
 	auto	sv1	=	[[NSScrollView alloc] init];
 	

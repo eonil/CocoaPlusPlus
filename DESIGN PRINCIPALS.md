@@ -135,8 +135,40 @@ DESIGN PRINCIPALS
 
 
 
+-	Every pointer wrappers passed by value-copy.
+
+	Definition of function parameter type doesn't need to be known then compiling. 
+	Forward declaration is enough. Every Objective-C pointer wrappers will be passed by value-copy.
+	
+	As a result, inline object creation will become impossible — yes, that is not a goal of this library.
+	Goal of this library is providing consistent and simple API. Objective-C object will never be passed
+	as reference. Anyway, if there's a corresponding C++ type, it may can be passed as a `const&` to allow 
+	inline object creation.
+
+	For example, there can be this sort of overloadings.
+
+		auto	test1(String) -> void;
+		auto	test1(std::string const&) -> void;
+
+	But these are not allowed.
+	
+		auto	test1(String const&) -> void;
+		auto	test1(String&) -> void;
+		auto	test1(String&&) -> void;
+
+	Anyway pointing is allowed, and it represents weak reference.
+	Pointer passing is usually used for delegate.
+
+		auto	setDelegate(Delegate*) -> void;
 
 
+
+
+	
+	
+	
+	
+	
 
 
 

@@ -33,7 +33,7 @@ public:
 	operator CGDataProviderRef() const;
 	
 public:
-	DataProvider(CoreFoundation::Data&);
+	DataProvider(CoreFoundation::Data);
 	
 public:
 	auto	copyData() const -> CoreFoundation::Data;

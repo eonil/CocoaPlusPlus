@@ -47,7 +47,7 @@ public:
 	auto	setDelegate(Delegate*) -> void;
 	auto	unsetDelegate() -> void;
 	
-	auto	setMainMenu(Menu&) -> void;
+	auto	setMainMenu(Menu) -> void;
 	
 	auto	run() -> void;
 	auto	stop() -> void;

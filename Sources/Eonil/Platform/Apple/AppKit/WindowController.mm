@@ -25,7 +25,7 @@ document() -> Document
 
 auto
 WindowController::
-setDocument(const Eonil::CocoaCPP::AppKit::Document &o) -> void
+setDocument(Eonil::CocoaCPP::AppKit::Document o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSDocument);
 	
@@ -65,7 +65,7 @@ window() -> Window
 
 auto
 WindowController::
-setWindow(const Eonil::CocoaCPP::AppKit::Window &o) -> void
+setWindow(Eonil::CocoaCPP::AppKit::Window o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSWindow);
 	

@@ -23,6 +23,13 @@ stringValue() const -> String
 }
 auto
 Cell::
+setStringValue(String o) -> void
+{
+	auto	self	=	get_objc_object<NSCell>();
+	[self setStringValue:o];
+}
+auto
+Cell::
 setStringValue(const String &o) -> void
 {
 	auto	self	=	get_objc_object<NSCell>();

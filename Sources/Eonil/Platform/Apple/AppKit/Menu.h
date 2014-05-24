@@ -36,7 +36,7 @@ Menu : public Foundation::Object
 public:
 	using	Foundation::Object::Object;
 	
-	auto	addItem(MenuItem&) -> void;
+	auto	addItem(MenuItem) -> void;
 	
 public:
 	static auto	menu() -> Menu;
@@ -63,10 +63,10 @@ public:
 public:
 	using	Foundation::Object::Object;
 	
-	auto	setTitle(Foundation::String const&) -> void;
-	auto	setKeyEquivalent(Foundation::String const&) -> void;
-	auto	setSubmenu(Menu&) -> void;
-	auto	setAction(ACTION const&) -> void;		//	Action will be copied.
+	auto	setTitle(Foundation::String) -> void;
+	auto	setKeyEquivalent(Foundation::String) -> void;
+	auto	setSubmenu(Menu) -> void;
+	auto	setAction(ACTION) -> void;		//	Action will be copied.
 	
 public:
 	static auto		menuItem() -> MenuItem;

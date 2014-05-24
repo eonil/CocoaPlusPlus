@@ -42,7 +42,7 @@ DataProvider::operator CGDataProviderRef() const
 
 
 
-DataProvider::DataProvider(CoreFoundation::Data& o) : Type(CGDataProviderCreateWithCFData(o))
+DataProvider::DataProvider(CoreFoundation::Data o) : Type(CGDataProviderCreateWithCFData(o))
 {
 }
 

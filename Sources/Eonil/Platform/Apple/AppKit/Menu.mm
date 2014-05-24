@@ -16,7 +16,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 
 
 auto
-Menu::addItem(MenuItem& o) -> void
+Menu::addItem(MenuItem o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSMenuItem);
 	
@@ -96,7 +96,7 @@ EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN
 using	MENU_ITEM	=	____Eonil_Cocoa_MenuItem_2;
 
 auto
-MenuItem::setTitle(const Foundation::String& o) -> void
+MenuItem::setTitle(Foundation::String o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSString);
 	
@@ -106,7 +106,7 @@ MenuItem::setTitle(const Foundation::String& o) -> void
 	[self setTitle:o];
 }
 auto
-MenuItem::setKeyEquivalent(const Foundation::String &o) -> void
+MenuItem::setKeyEquivalent(Foundation::String o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSString);
 	
@@ -116,7 +116,7 @@ MenuItem::setKeyEquivalent(const Foundation::String &o) -> void
 	[self setKeyEquivalent:o];
 }
 auto
-MenuItem::setSubmenu(Eonil::CocoaCPP::AppKit::Menu &o) -> void
+MenuItem::setSubmenu(Eonil::CocoaCPP::AppKit::Menu o) -> void
 {
 	EONIL_COCOA_ASSERT_OBJC_TYPE(o, NSMenu);
 	
@@ -126,7 +126,7 @@ MenuItem::setSubmenu(Eonil::CocoaCPP::AppKit::Menu &o) -> void
 	[self setSubmenu:o];
 }
 auto
-MenuItem::setAction(ACTION const& o) -> void
+MenuItem::setAction(ACTION o) -> void
 {
 	auto	self	=	get_objc_object<MENU_ITEM>();
 	self->action	=	o;

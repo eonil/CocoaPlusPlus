@@ -85,7 +85,7 @@ headerCell() const -> Cell
 }
 auto
 TableColumn::
-setHeaderCell(Cell const& o) -> void
+setHeaderCell(Cell o) -> void
 {
 	auto	self	=	get_objc_object<NSTableColumn>();
 	[self setHeaderCell:o];
