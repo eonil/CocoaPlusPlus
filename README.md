@@ -28,6 +28,11 @@ It's far easier to design and maintain a correct program in C++.
 
 
 
+Please don't be serious on this! This is just a personal project ;)
+
+
+
+
 
 License
 -------

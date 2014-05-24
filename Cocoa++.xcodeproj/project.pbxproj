@@ -29,6 +29,15 @@
 		457B61691909FED60021A442 /* ImageDestination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457B61671909FED60021A442 /* ImageDestination.cpp */; };
 		458444311903D5E800B468A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458444301903D5E800B468A7 /* Cocoa.framework */; };
 		4584443D1903D5E800B468A7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4584443C1903D5E800B468A7 /* main.cpp */; };
+		4590A82619308F5F009E014C /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A82419308F5F009E014C /* Common.cpp */; };
+		4590A82919308FCD009E014C /* Responder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A82719308FCD009E014C /* Responder.cpp */; };
+		4590A82C19308FD3009E014C /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A82A19308FD3009E014C /* Application.cpp */; };
+		4590A82F19308FD8009E014C /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A82D19308FD8009E014C /* View.cpp */; };
+		4590A83219308FDD009E014C /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A83019308FDD009E014C /* Window.cpp */; };
+		4590A83519308FF7009E014C /* ScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A83319308FF7009E014C /* ScrollView.cpp */; };
+		4590A83819308FFC009E014C /* TextView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A83619308FFC009E014C /* TextView.cpp */; };
+		4590A83B1930A8A0009E014C /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A8391930A8A0009E014C /* Color.cpp */; };
+		4590A83E1930A8A6009E014C /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4590A83C1930A8A6009E014C /* Control.cpp */; };
 		459DC83D19089F5C00FF6BD2 /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = 453905081903E1E200E2B04F /* Common.mm */; };
 		45B76BCF19093496002DF53B /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDF41908962E008B6530 /* String.cpp */; };
 		45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454FDDDD190890E7008B6530 /* Cocoa.cpp */; };
@@ -191,6 +200,24 @@
 		4584443C1903D5E800B468A7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4584443E1903D5E800B468A7 /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
 		4584444F1903D5E900B468A7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4590A82419308F5F009E014C /* Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
+		4590A82519308F5F009E014C /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		4590A82719308FCD009E014C /* Responder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Responder.cpp; sourceTree = "<group>"; };
+		4590A82819308FCD009E014C /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
+		4590A82A19308FD3009E014C /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		4590A82B19308FD3009E014C /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		4590A82D19308FD8009E014C /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		4590A82E19308FD8009E014C /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		4590A83019308FDD009E014C /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		4590A83119308FDD009E014C /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		4590A83319308FF7009E014C /* ScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollView.cpp; sourceTree = "<group>"; };
+		4590A83419308FF7009E014C /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		4590A83619308FFC009E014C /* TextView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextView.cpp; sourceTree = "<group>"; };
+		4590A83719308FFC009E014C /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView.h; sourceTree = "<group>"; };
+		4590A8391930A8A0009E014C /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		4590A83A1930A8A0009E014C /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		4590A83C1930A8A6009E014C /* Control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Control.cpp; sourceTree = "<group>"; };
+		4590A83D1930A8A6009E014C /* Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Control.h; sourceTree = "<group>"; };
 		45B76BE719096D30002DF53B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		45B76BFB19097C86002DF53B /* Pasteboard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pasteboard.mm; sourceTree = "<group>"; };
 		45B76BFC19097C86002DF53B /* Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pasteboard.h; sourceTree = "<group>"; };
@@ -319,6 +346,7 @@
 				4539052C1903ED9000E2B04F /* CoreAnimation */,
 				4539050B1903E1E200E2B04F /* Foundation */,
 				453904FE1903E1E200E2B04F /* AppKit */,
+				4590A82319308F50009E014C /* UIKit */,
 			);
 			path = Apple;
 			sourceTree = "<group>";
@@ -539,6 +567,31 @@
 			path = TestApp;
 			sourceTree = "<group>";
 		};
+		4590A82319308F50009E014C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4590A82419308F5F009E014C /* Common.cpp */,
+				4590A82519308F5F009E014C /* Common.h */,
+				4590A82719308FCD009E014C /* Responder.cpp */,
+				4590A82819308FCD009E014C /* Responder.h */,
+				4590A8391930A8A0009E014C /* Color.cpp */,
+				4590A83A1930A8A0009E014C /* Color.h */,
+				4590A82D19308FD8009E014C /* View.cpp */,
+				4590A82E19308FD8009E014C /* View.h */,
+				4590A83C1930A8A6009E014C /* Control.cpp */,
+				4590A83D1930A8A6009E014C /* Control.h */,
+				4590A83319308FF7009E014C /* ScrollView.cpp */,
+				4590A83419308FF7009E014C /* ScrollView.h */,
+				4590A83619308FFC009E014C /* TextView.cpp */,
+				4590A83719308FFC009E014C /* TextView.h */,
+				4590A83019308FDD009E014C /* Window.cpp */,
+				4590A83119308FDD009E014C /* Window.h */,
+				4590A82A19308FD3009E014C /* Application.cpp */,
+				4590A82B19308FD3009E014C /* Application.h */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -650,9 +703,12 @@
 				45B76BDA190934F2002DF53B /* None.mm in Sources */,
 				45B76BDB190934F2002DF53B /* Layer.mm in Sources */,
 				45B76BFD19097C86002DF53B /* Pasteboard.mm in Sources */,
+				4590A83E1930A8A6009E014C /* Control.cpp in Sources */,
+				4590A83819308FFC009E014C /* TextView.cpp in Sources */,
 				45B76BDC190934F2002DF53B /* Object.mm in Sources */,
 				45B76C151909B7BF002DF53B /* Image.mm in Sources */,
 				45B76C121909B639002DF53B /* ImageView.mm in Sources */,
+				4590A82F19308FD8009E014C /* View.cpp in Sources */,
 				45B76BDD190934F2002DF53B /* Color.mm in Sources */,
 				45478F9E192A429A009E72B8 /* Text.mm in Sources */,
 				45478F8F192A3E1A009E72B8 /* Cursor.mm in Sources */,
@@ -670,14 +726,19 @@
 				45478F98192A4270009E72B8 /* ScrollView.mm in Sources */,
 				45B76C1E1909F1C9002DF53B /* URL.mm in Sources */,
 				45478FA1192A429F009E72B8 /* Font.mm in Sources */,
+				4590A83219308FDD009E014C /* Window.cpp in Sources */,
 				45478F92192A41FF009E72B8 /* TextField.mm in Sources */,
+				4590A82919308FCD009E014C /* Responder.cpp in Sources */,
 				45B76C1B1909EF68002DF53B /* FileManager.mm in Sources */,
 				45478F81192A04B9009E72B8 /* Application.mm in Sources */,
 				45B76BD1190934C4002DF53B /* Cocoa.cpp in Sources */,
 				45478FAB192A4ADB009E72B8 /* WindowController.mm in Sources */,
 				45B76BD2190934C4002DF53B /* Type.cpp in Sources */,
+				4590A82C19308FD3009E014C /* Application.cpp in Sources */,
 				45B76BD3190934C4002DF53B /* Data.cpp in Sources */,
 				45B76BD4190934C4002DF53B /* Rect.cpp in Sources */,
+				4590A83519308FF7009E014C /* ScrollView.cpp in Sources */,
+				4590A82619308F5F009E014C /* Common.cpp in Sources */,
 				45B76BD5190934C4002DF53B /* Color.cpp in Sources */,
 				45FC6F75190D94450018BC59 /* Date.mm in Sources */,
 				45478F8C192A3710009E72B8 /* Common.cpp in Sources */,
@@ -687,6 +748,7 @@
 				45B76BD7190934C4002DF53B /* DataProvider.cpp in Sources */,
 				45478F661929FAA6009E72B8 /* ClassTemplate.cpp in Sources */,
 				45B76BD8190934C4002DF53B /* Image.cpp in Sources */,
+				4590A83B1930A8A0009E014C /* Color.cpp in Sources */,
 				45B76BCF19093496002DF53B /* String.cpp in Sources */,
 				45478F95192A420F009E72B8 /* TextView.mm in Sources */,
 				45478FAE192A50EA009E72B8 /* Document.cpp in Sources */,

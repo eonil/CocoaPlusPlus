@@ -26,6 +26,11 @@
 #define EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_BEGIN					namespace Eonil { namespace CocoaCPP { namespace AppKit {
 #define EONIL_PLATFORM_APPLE_APPKIT_NAMESPACE_END					} } }
 
+#define EONIL_PLATFORM_APPLE_UIKIT_NAMESPACE_BEGIN					namespace Eonil { namespace CocoaCPP { namespace UIKit {
+#define EONIL_PLATFORM_APPLE_UIKIT_NAMESPACE_END					} } }
+
+
+
 #ifdef __cplusplus
 #include <memory>
 #include <functional>
